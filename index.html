@@ -6,7 +6,6 @@
     <title>Steven Compere - PhD</title>
     <meta name="description" content="Site officiel de Steven Compere, Dr. Ingénieur en Chimie des Matériaux. Spécialiste des matériaux carbonés poreux et procédés d'adsorption.">
     
-    <!-- Open Graph (Aperçu LinkedIn / Twitter) -->
     <meta property="og:title" content="Steven Compere - Dr. Ingénieur Chimie des Matériaux">
     <meta property="og:description" content="Expertise en synthèse de carbone poreux, physisorption de gaz et procédés R&D.">
     <meta property="og:url" content="https://stevencompere.com">
@@ -34,11 +33,12 @@
         .pub-title { font-weight: bold; }
         .pub-journal { font-style: italic; color: #444; }
 
-        /* Masquer par défaut la langue inactive */
-        [lang="en"] { display: none; }
+        /* Gestion CSS pure pour le basculement de langue */
+        body.show-fr [lang="en"] { display: none !important; }
+        body.show-en [lang="fr"] { display: none !important; }
     </style>
 </head>
-<body>
+<body class="show-fr">
 
     <div class="lang-switch">
         <button class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">FR</button>
@@ -108,8 +108,9 @@
 
     <script>
         function setLanguage(lang) {
-            document.querySelectorAll('[lang="fr"]').forEach(el => el.style.display = (lang === 'fr') ? '' : 'none');
-            document.querySelectorAll('[lang="en"]').forEach(el => el.style.display = (lang === 'en') ? '' : 'none');
+            if (lang !== 'fr' && lang !== 'en') lang = 'fr';
+            
+            document.body.className = (lang === 'fr') ? 'show-fr' : 'show-en';
             
             document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
@@ -119,8 +120,10 @@
         }
 
         const savedLang = localStorage.getItem('preferred_lang');
-        const userLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
-        setLanguage(savedLang || userLang);
+        const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        const initialLang = savedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
+        
+        setLanguage(initialLang);
     </script>
 
 </body>
