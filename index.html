@@ -1,9 +1,12 @@
+Voici le code bilingue **FR / EN** incluant l'ensemble de vos modifications (liens ORCID, LinkedIn, ResearchGate et adresse e-mail mise à jour) :
+
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Compere - Ingénieur Chimiste, PhD Chimie des Matériaux</title>
+    <title>Steven Compere - PhD</title>
     <meta name="description" content="Site officiel de Steven Compere, Dr. Ingénieur en Chimie des Matériaux. Spécialiste des matériaux carbonés poreux et procédés d'adsorption.">
     
     <!-- Open Graph (Aperçu LinkedIn / Twitter) -->
@@ -15,6 +18,11 @@
     <style>
         :root { --primary: #0f4c81; --text: #1a1a1a; --bg-alt: #f8f9fa; }
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; max-width: 850px; margin: 0 auto; padding: 30px 20px; color: var(--text); }
+        
+        .lang-switch { text-align: right; margin-bottom: 10px; }
+        .lang-btn { background: none; border: 1px solid var(--primary); color: var(--primary); padding: 4px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85rem; }
+        .lang-btn.active { background: var(--primary); color: #fff; }
+
         header { border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px; }
         h1 { margin: 0; font-size: 2rem; color: var(--primary); }
         h2 { margin: 5px 0 15px 0; font-size: 1.2rem; color: #555; font-weight: normal; }
@@ -28,28 +36,51 @@
         .pub-item { margin-bottom: 12px; }
         .pub-title { font-weight: bold; }
         .pub-journal { font-style: italic; color: #444; }
+
+        /* Masquer par défaut la langue inactive */
+        [lang="en"] { display: none; }
     </style>
 </head>
 <body>
 
+    <div class="lang-switch">
+        <button class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">FR</button>
+        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+    </div>
+
     <header>
         <h1>Steven Compere, PhD</h1>
-        <h2>Ingénieur Chimiste | Docteur en Chimie des Matériaux</h2>
-        <a href="CV_Steven_Compere.pdf" class="btn" target="_blank">Télécharger le CV (PDF)</a>
+        
+        <h2 lang="fr">Ingénieur Chimiste | Docteur en Chimie des Matériaux</h2>
+        <h2 lang="en">Chemical Engineer | PhD in Materials Chemistry</h2>
+
+        <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="fr">Télécharger le CV (PDF)</a>
+        <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="en">Download Resume (PDF)</a>
     </header>
 
     <section>
-        <h3>Expertise & Domaines de recherche</h3>
-        <ul>
+        <h3 lang="fr">Expertise & Domaines de recherche</h3>
+        <h3 lang="en">Expertise & Research Fields</h3>
+        
+        <ul lang="fr">
             <li><strong>Matériaux poreux :</strong> Synthèse, modification de surface et caractérisation avancée de charbons actifs et carbones structurés.</li>
             <li><strong>Physique des surfaces & Adsorption :</strong> Physisorption de gaz (N2, Ar, CO2), micro/mésoporosité, analyses BET, NLDFT, QSDFT.</li>
             <li><strong>Techniques analytiques :</strong> DRX, XPS, MEB-EDX, ATG/ATD, spectroscopie FTIR.</li>
             <li><strong>Procédés R&D :</strong> Pyrolyse, activation chimique/physique, capture de carbone, purification de phase liquide/gaz.</li>
         </ul>
+
+        <ul lang="en">
+            <li><strong>Porous Materials:</strong> Synthesis, surface modification, and advanced characterization of activated carbons and structured carbons.</li>
+            <li><strong>Surface Physics & Adsorption:</strong> Gas physisorption (N2, Ar, CO2), micro/mesoporosity, BET, NLDFT, QSDFT analyses.</li>
+            <li><strong>Analytical Techniques:</strong> XRD, XPS, SEM-EDX, TGA/DTA, FTIR spectroscopy.</li>
+            <li><strong>R&D Processes:</strong> Pyrolysis, chemical/physical activation, carbon capture, liquid/gas phase purification.</li>
+        </ul>
     </section>
 
     <section>
-        <h3>Publications Sélectionnées</h3>
+        <h3 lang="fr">Publications Sélectionnées</h3>
+        <h3 lang="en">Selected Publications</h3>
+
         <div class="pub-item">
             <span class="pub-title">Titre de votre publication principale 1</span><br>
             <span class="pub-authors">S. Compere, et al.</span> — <span class="pub-journal">Journal Name, Year</span><br>
@@ -63,19 +94,39 @@
     </section>
 
     <section>
-        <h3>Profils & Réseaux Académiques</h3>
+        <h3 lang="fr">Profils & Réseaux Académiques</h3>
+        <h3 lang="en">Academic Profiles & Networks</h3>
         <ul>
             <li><a href="https://scholar.google.com/citations?hl=fr&user=AmX65-sAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
             <li><a href="https://orcid.org/my-orcid?orcid=0009-0006-3474-8748" target="_blank" rel="noopener">ORCID</a></li>
             <li><a href="https://www.linkedin.com/in/steven-compere/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://www.researchgate.net/profile/Steven-Compere?ev=hdr_xprf" target="_blank" rel="noopener">researchgate</a></li>
+            <li><a href="https://www.researchgate.net/profile/Steven-Compere?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a></li>
         </ul>
     </section>
 
     <section>
         <h3>Contact</h3>
-        <p>E-mail : <a href="mailto:contact@stevencompere.com">compere.steven@gmail.com</a></p>
+        <p>E-mail : <a href="mailto:compere.steven@gmail.com">compere.steven@gmail.com</a></p>
     </section>
+
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('[lang="fr"]').forEach(el => el.style.display = (lang === 'fr') ? '' : 'none');
+            document.querySelectorAll('[lang="en"]').forEach(el => el.style.display = (lang === 'en') ? '' : 'none');
+            
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferred_lang', lang);
+        }
+
+        const savedLang = localStorage.getItem('preferred_lang');
+        const userLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
+        setLanguage(savedLang || userLang);
+    </script>
 
 </body>
 </html>
+
+```
