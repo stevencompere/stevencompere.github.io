@@ -3,126 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Steven Compère</title>
-    <meta name="description" content="Site officiel de Steven Compere, Dr. Ingénieur en Chimie des Matériaux. Spécialiste des matériaux carbonés poreux et procédés d'adsorption.">
+    <title>Dr. Steven Compere - Portfolio R&D</title>
+    <meta name="description" content="Site officiel de Dr. Steven Compere. Ingénieur Chimiste & PhD en Chimie des Matériaux. Spécialiste des matériaux poreux et procédés d'adsorption.">
     
-    <meta property="og:title" content="Steven Compere - Dr. Ingénieur Chimie des Matériaux">
-    <meta property="og:description" content="Expertise en synthèse de carbone poreux, physisorption de gaz et procédés R&D.">
-    <meta property="og:url" content="https://stevencompere.com">
-    <meta property="og:type" content="website">
-
     <style>
-        :root { --primary: #0f4c81; --text: #1a1a1a; --bg-alt: #f8f9fa; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; line-height: 1.6; max-width: 850px; margin: 0 auto; padding: 30px 20px; color: var(--text); }
-        
-        .lang-switch { text-align: right; margin-bottom: 10px; }
-        .lang-btn { background: none; border: 1px solid var(--primary); color: var(--primary); padding: 4px 10px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85rem; }
-        .lang-btn.active { background: var(--primary); color: #fff; }
+        :root {
+            --primary: #0052cc;
+            --primary-hover: #003d99;
+            --accent: #00b8d9;
+            --bg: #f4f5f7;
+            --surface: #ffffff;
+            --text: #172b4d;
+            --text-subtle: #5e6c84;
+            --border: #e1e4e8;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
 
-        header { border-bottom: 2px solid var(--primary); padding-bottom: 15px; margin-bottom: 30px; }
-        h1 { margin: 0; font-size: 2rem; color: var(--primary); }
-        h2 { margin: 5px 0 15px 0; font-size: 1.2rem; color: #555; font-weight: normal; }
-        h3 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary); border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 35px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        a { color: var(--primary); text-decoration: none; font-weight: 500; }
-        a:hover { text-decoration: underline; }
-        .btn { display: inline-block; background: var(--primary); color: #fff; padding: 8px 16px; border-radius: 4px; font-size: 0.9rem; font-weight: bold; margin-top: 10px; }
-        .btn:hover { background: #0b3860; text-decoration: none; }
-        .pub-item { margin-bottom: 12px; }
-        .pub-title { font-weight: bold; }
-        .pub-journal { font-style: italic; color: #444; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* Gestion CSS pure pour le basculement de langue */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* En-tête Fixe / Barre Supérieure */
+        .top-bar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .lang-switch { display: flex; gap: 8px; }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-subtle);
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active, .lang-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* En-tête Principal (Hero) */
+        header.hero {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 50px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .hero-title {
+            font-size: 2.4rem;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-subtle);
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn:hover { background: var(--primary-hover); }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 82, 204, 0.05);
+        }
+
+        /* Layout Grille (Sections) */
+        section { margin-bottom: 40px; }
+
+        .section-title {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-subtle);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        /* Grille de Cartes pour l'Expertise */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .card p, .card ul {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Style des Publications */
+        .pub-list { display: flex; flex-direction: column; gap: 15px; }
+
+        .pub-card {
+            background: var(--surface);
+            border-left: 4px solid var(--primary);
+            border-top: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 20px;
+        }
+
+        .pub-title { font-weight: 700; font-size: 1rem; color: var(--text); }
+        .pub-meta { font-size: 0.9rem; color: var(--text-subtle); margin: 5px 0 10px 0; }
+        .pub-link { font-size: 0.85rem; font-weight: 600; color: var(--primary); text-decoration: none; }
+        .pub-link:hover { text-decoration: underline; }
+
+        /* Grille des Liens Sociaux/Académiques */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .social-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            display: block;
+            transition: all 0.2s ease;
+        }
+
+        .social-card:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: #fafbfc;
+        }
+
+        /* Gestion de l'affichage multilingue par classe CSS */
         body.show-fr [lang="en"] { display: none !important; }
         body.show-en [lang="fr"] { display: none !important; }
     </style>
 </head>
 <body class="show-fr">
 
-    <div class="lang-switch">
-        <button class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">FR</button>
-        <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+    <div class="top-bar">
+        <div class="container">
+            <span class="brand">Dr. Steven Compere</span>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">FR</button>
+                <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
+            </div>
+        </div>
     </div>
 
-    <header>
-        <h1>Steven Compere, PhD</h1>
-        
-        <h2 lang="fr">Ingénieur Chimiste | Docteur en Chimie des Matériaux</h2>
-        <h2 lang="en">Chemical Engineer | PhD in Materials Chemistry</h2>
+    <header class="hero">
+        <div class="container">
+            <h1 class="hero-title">Dr. Steven Compere</h1>
+            <h2 class="hero-subtitle" lang="fr">Ingénieur Chimiste | Docteur en Chimie des Matériaux</h2>
+            <h2 class="hero-subtitle" lang="en">Chemical Engineer | PhD in Materials Chemistry</h2>
 
-        <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="fr">Télécharger le CV (PDF)</a>
-        <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="en">Download Resume (PDF)</a>
+            <div class="cta-buttons">
+                <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="fr">Télécharger le CV (PDF)</a>
+                <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="en">Download Resume (PDF)</a>
+                <a href="mailto:compere.steven@gmail.com" class="btn btn-secondary" lang="fr">Me contacter</a>
+                <a href="mailto:compere.steven@gmail.com" class="btn btn-secondary" lang="en">Contact Me</a>
+            </div>
+        </div>
     </header>
 
-    <section>
-        <h3 lang="fr">Expertise & Domaines de recherche</h3>
-        <h3 lang="en">Expertise & Research Fields</h3>
-        
-        <ul lang="fr">
-            <li><strong>Matériaux poreux :</strong> Synthèse, modification de surface et caractérisation avancée de charbons actifs et carbones structurés.</li>
-            <li><strong>Physique des surfaces & Adsorption :</strong> Physisorption de gaz (N2, Ar, CO2), micro/mésoporosité, analyses BET, NLDFT, QSDFT.</li>
-            <li><strong>Techniques analytiques :</strong> DRX, XPS, MEB-EDX, ATG/ATD, spectroscopie FTIR.</li>
-            <li><strong>Procédés R&D :</strong> Pyrolyse, activation chimique/physique, capture de carbone, purification de phase liquide/gaz.</li>
-        </ul>
+    <main class="container">
 
-        <ul lang="en">
-            <li><strong>Porous Materials:</strong> Synthesis, surface modification, and advanced characterization of activated carbons and structured carbons.</li>
-            <li><strong>Surface Physics & Adsorption:</strong> Gas physisorption (N2, Ar, CO2), micro/mesoporosity, BET, NLDFT, QSDFT analyses.</li>
-            <li><strong>Analytical Techniques:</strong> XRD, XPS, SEM-EDX, TGA/DTA, FTIR spectroscopy.</li>
-            <li><strong>R&D Processes:</strong> Pyrolysis, chemical/physical activation, carbon capture, liquid/gas phase purification.</li>
-        </ul>
-    </section>
+        <!-- DOMAINES D'EXPERTISE -->
+        <section>
+            <h3 class="section-title" lang="fr">Domaines d'Expertise & R&D</h3>
+            <h3 class="section-title" lang="en">Core Expertise & R&D</h3>
 
-    <section>
-        <h3 lang="fr">Publications Sélectionnées</h3>
-        <h3 lang="en">Selected Publications</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <h4 lang="fr">Matériaux Poreux & Carbonés</h4>
+                    <h4 lang="en">Porous & Carbon Materials</h4>
+                    <ul lang="fr">
+                        <li>Synthèse, pyrolyse et activation (chimique/physique).</li>
+                        <li>Charbons actifs et carbones structurés sur mesure.</li>
+                        <li>Modification et ingénierie de surface.</li>
+                    </ul>
+                    <ul lang="en">
+                        <li>Synthesis, pyrolysis, and activation (chemical/physical).</li>
+                        <li>Tailored activated carbons and structured carbons.</li>
+                        <li>Surface engineering and functionalization.</li>
+                    </ul>
+                </div>
 
-        <div class="pub-item">
-            <span class="pub-title">Titre de votre publication principale 1</span><br>
-            <span class="pub-authors">S. Compere, et al.</span> — <span class="pub-journal">Journal Name, Year</span><br>
-            <a href="https://doi.org/VOTRE_DOI_1" target="_blank" rel="noopener">DOI: 10.1016/j.example</a>
-        </div>
-        <div class="pub-item">
-            <span class="pub-title">Titre de votre publication principale 2</span><br>
-            <span class="pub-authors">S. Compere, et al.</span> — <span class="pub-journal">Journal Name, Year</span><br>
-            <a href="https://doi.org/VOTRE_DOI_2" target="_blank" rel="noopener">DOI: 10.1016/j.example</a>
-        </div>
-    </section>
+                <div class="card">
+                    <h4 lang="fr">Adsorption & Physique des Surfaces</h4>
+                    <h4 lang="en">Adsorption & Surface Physics</h4>
+                    <ul lang="fr">
+                        <li>Physisorption de gaz ($N_2$, $Ar$, $CO_2$).</li>
+                        <li>Analyse de texture : BET, NLDFT, QSDFT.</li>
+                        <li>Capture de carbone et purification gaz/liquide.</li>
+                    </ul>
+                    <ul lang="en">
+                        <li>Gas physisorption ($N_2$, $Ar$, $CO_2$).</li>
+                        <li>Textural analysis: BET, NLDFT, QSDFT models.</li>
+                        <li>Carbon capture and gas/liquid purification.</li>
+                    </ul>
+                </div>
 
-    <section>
-        <h3 lang="fr">Profils & Réseaux Académiques</h3>
-        <h3 lang="en">Academic Profiles & Networks</h3>
-        <ul>
-            <li><a href="https://scholar.google.com/citations?hl=fr&user=AmX65-sAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
-            <li><a href="https://orcid.org/my-orcid?orcid=0009-0006-3474-8748" target="_blank" rel="noopener">ORCID</a></li>
-            <li><a href="https://www.linkedin.com/in/steven-compere/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://www.researchgate.net/profile/Steven-Compere?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a></li>
-        </ul>
-    </section>
+                <div class="card">
+                    <h4 lang="fr">Caractérisation Avancée</h4>
+                    <h4 lang="en">Advanced Characterization</h4>
+                    <ul lang="fr">
+                        <li>Diffraction des rayons X (DRX).</li>
+                        <li>Spectroscopie XPS et FTIR.</li>
+                        <li>Microscopie MEB-EDX.</li>
+                        <li>Analyse thermique ATG / ATD.</li>
+                    </ul>
+                    <ul lang="en">
+                        <li>X-Ray Diffraction (XRD).</li>
+                        <li>XPS and FTIR spectroscopy.</li>
+                        <li>SEM-EDX electron microscopy.</li>
+                        <li>Thermal analysis TGA / DTA.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h3>Contact</h3>
-        <p>E-mail : <a href="mailto:compere.steven@gmail.com">compere.steven@gmail.com</a></p>
-    </section>
+        <!-- PUBLICATIONS SÉLECTIONNÉES -->
+        <section>
+            <h3 class="section-title" lang="fr">Publications Sélectionnées</h3>
+            <h3 class="section-title" lang="en">Selected Publications</h3>
+
+            <div class="pub-list">
+                <div class="pub-card">
+                    <div class="pub-title">Titre de votre publication principale 1</div>
+                    <div class="pub-meta">S. Compere, et al. — <em>Nom de la Revue</em>, Année</div>
+                    <a href="https://doi.org/VOTRE_DOI_1" class="pub-link" target="_blank" rel="noopener">Consulter l'article (DOI) →</a>
+                </div>
+
+                <div class="pub-card">
+                    <div class="pub-title">Titre de votre publication principale 2</div>
+                    <div class="pub-meta">S. Compere, et al. — <em>Nom de la Revue</em>, Année</div>
+                    <a href="https://doi.org/VOTRE_DOI_2" class="pub-link" target="_blank" rel="noopener">Consulter l'article (DOI) →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESEAUX & PROFIL -->
+        <section>
+            <h3 class="section-title" lang="fr">Profils Scientifiques & Réseaux</h3>
+            <h3 class="section-title" lang="en">Scientific Profiles & Networks</h3>
+
+            <div class="social-grid">
+                <a href="https://scholar.google.com/citations?hl=fr&user=AmX65-sAAAAJ" class="social-card" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://orcid.org/my-orcid?orcid=0009-0006-3474-8748" class="social-card" target="_blank" rel="noopener">ORCID</a>
+                <a href="https://www.linkedin.com/in/steven-compere/" class="social-card" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.researchgate.net/profile/Steven-Compere?ev=hdr_xprf" class="social-card" target="_blank" rel="noopener">ResearchGate</a>
+            </div>
+        </section>
+
+    </main>
 
     <script>
         function setLanguage(lang) {
             if (lang !== 'fr' && lang !== 'en') lang = 'fr';
-            
             document.body.className = (lang === 'fr') ? 'show-fr' : 'show-en';
-            
             document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            
             document.documentElement.lang = lang;
             localStorage.setItem('preferred_lang', lang);
         }
 
         const savedLang = localStorage.getItem('preferred_lang');
-        const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        const browserLang = (navigator.language || '').toLowerCase();
         const initialLang = savedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
-        
         setLanguage(initialLang);
     </script>
 
