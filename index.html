@@ -1,384 +1,912 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Steven Compere - Portfolio R&D</title>
-    <meta name="description" content="Site officiel de Dr. Steven Compere. Ingénieur Chimiste & PhD en Chimie des Matériaux. Spécialiste des matériaux poreux et procédés d'adsorption.">
-    
-    <style>
-        :root {
-            --primary: #0052cc;
-            --primary-hover: #003d99;
-            --accent: #00b8d9;
-            --bg: #f4f5f7;
-            --surface: #ffffff;
-            --text: #172b4d;
-            --text-subtle: #5e6c84;
-            --border: #e1e4e8;
-            --radius: 8px;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Steven Compère — Chimie des matériaux, carbones poreux &amp; adsorption</title>
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta name="description" content="Dr. Steven Compere (Compère) — Docteur-Ingénieur en chimie des matériaux. Synthèse de carbones nanostructurés à gabarit zéolithique (ZTC), matériaux poreux, adsorption de gaz et caractérisation avancée. Post-doctorant CEA Paris-Saclay.">
+<meta name="author" content="Steven Compère">
+<link rel="canonical" href="https://stevencompere.com/">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
+<!-- Open Graph / réseaux sociaux -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Dr. Steven Compère">
+<meta property="og:url" content="https://stevencompere.com/">
+<meta property="og:title" content="Dr. Steven Compère — Chimie des matériaux &amp; carbones poreux">
+<meta property="og:description" content="Docteur-Ingénieur en chimie des matériaux : carbones à gabarit zéolithique (ZTC), adsorption de gaz, caractérisation avancée. Publications, brevet et parcours R&amp;D.">
+<meta property="og:image" content="https://stevencompere.com/portrait.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary">
 
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a5c63'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' fill='white' text-anchor='middle'>SC</text></svg>">
 
-        /* En-tête Fixe / Barre Supérieure */
-        .top-bar {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+<!-- Données structurées : aide Google à comprendre qui vous êtes -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Steven Compère",
+  "alternateName": ["Steven Compere", "S. Compère", "S. Compere"],
+  "honorificPrefix": "Dr.",
+  "url": "https://stevencompere.com/",
+  "email": "mailto:compere.steven@gmail.com",
+  "jobTitle": "Docteur-Ingénieur en chimie des matériaux",
+  "description": "Chercheur spécialisé dans la synthèse de carbones nanostructurés à gabarit zéolithique (ZTC), les matériaux poreux et les procédés d'adsorption.",
+  "knowsAbout": ["Zeolite-Templated Carbons", "Matériaux poreux", "Adsorption de gaz", "Zéolithes", "Capture du CO2", "Dépôt chimique en phase vapeur", "Caractérisation des matériaux"],
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Université de Poitiers"},
+    {"@type": "CollegeOrUniversity", "name": "Haute École Louvain en Hainaut (HELHa)"}
+  ],
+  "worksFor": {"@type": "Organization", "name": "CEA Paris-Saclay"},
+  "sameAs": [
+    "https://scholar.google.com/citations?hl=fr&user=AmX65-sAAAAJ",
+    "https://orcid.org/0009-0006-3474-8748",
+    "https://www.linkedin.com/in/steven-compere/",
+    "https://www.researchgate.net/profile/Steven-Compere"
+  ]
+}
+</script>
 
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+<style>
+/* ============================================================
+   1. VARIABLES — change une couleur ici, tout le site suit
+   ============================================================ */
+:root{
+  --bg:#fbfbf9;
+  --surface:#ffffff;
+  --text:#191c1c;
+  --muted:#5d6462;
+  --border:#e4e3dd;
+  --accent:#1a5c63;
+  --accent-hover:#124349;
+  --accent-soft:#eef4f4;
+  --radius:10px;
+  --maxw:1080px;
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px -12px rgba(0,0,0,.12);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#111414;--surface:#191d1d;--text:#e9e9e5;--muted:#9ea6a4;
+    --border:#2a2f2f;--accent:#79b8bd;--accent-hover:#a3d3d7;--accent-soft:#16302f;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
 
-        .brand {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--primary);
-        }
+/* ============================================================
+   2. BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 
-        .lang-switch { display: flex; gap: 8px; }
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
-        .lang-btn {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-subtle);
-            padding: 4px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.2s ease;
-        }
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(2.1rem,6vw,3.4rem)}
+h2{font-size:clamp(1.5rem,3.6vw,2rem)}
+h3{font-size:1.12rem}
+p{margin:0 0 1em}
 
-        .lang-btn.active, .lang-btn:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
+/* ============================================================
+   3. BILINGUISME  (body.show-fr / body.show-en)
+   ============================================================ */
+body [lang]{display:none}
+body.show-fr [lang="fr"],
+body.show-en [lang="en"]{display:revert}
 
-        /* En-tête Principal (Hero) */
-        header.hero {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-            padding: 50px 0;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
+/* ============================================================
+   4. NAVIGATION
+   ============================================================ */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:var(--bg); /* repli si color-mix non supporté */
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  max-width:var(--maxw);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;gap:20px;min-height:62px;
+}
+.brand{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--text);white-space:nowrap}
+.brand:hover{text-decoration:none;color:var(--accent)}
+.nav-links{display:flex;gap:22px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  font-size:.86rem;color:var(--muted);white-space:nowrap;
+  padding:6px 0;border-bottom:2px solid transparent;
+}
+.nav-links a:hover{color:var(--accent);text-decoration:none;border-bottom-color:var(--accent)}
 
-        .hero-title {
-            font-size: 2.4rem;
-            color: var(--text);
-            letter-spacing: -0.5px;
-            margin-bottom: 5px;
-        }
+.lang{display:flex;gap:2px;border:1px solid var(--border);border-radius:999px;padding:3px;background:var(--surface)}
+.lang button{
+  font:inherit;font-size:.72rem;font-weight:600;letter-spacing:.04em;
+  padding:4px 11px;border:0;border-radius:999px;cursor:pointer;
+  background:transparent;color:var(--muted);
+}
+.lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){.lang button[aria-pressed="true"]{color:#0f1414}}
 
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-subtle);
-            font-weight: 400;
-            margin-bottom: 25px;
-        }
+@media (max-width:820px){
+  .nav-links{display:none}
+}
 
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+/* ============================================================
+   5. HERO
+   ============================================================ */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--border)}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.portrait{
+  width:170px;height:170px;border-radius:50%;object-fit:cover;
+  border:4px solid var(--surface);box-shadow:var(--shadow);
+}
+.eyebrow{
+  display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--accent);
+  background:var(--accent-soft);padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.hero .role{
+  font-family:var(--sans);font-size:clamp(1rem,2.4vw,1.22rem);font-weight:500;
+  color:var(--muted);margin:14px 0 0;
+}
+.hero .pitch{max-width:60ch;margin-top:20px;color:var(--muted)}
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            background: var(--primary);
-            color: white;
-            padding: 10px 20px;
-            border-radius: var(--radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: background 0.2s ease;
-            font-size: 0.95rem;
-        }
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 20px;border-radius:8px;font-size:.92rem;font-weight:600;
+  border:1px solid var(--accent);background:var(--accent);color:#fff;
+  transition:transform .12s ease,background .15s ease;
+}
+.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:#fff;text-decoration:none;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--accent);border-color:var(--border)}
+.btn-ghost:hover{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+@media (prefers-color-scheme:dark){.btn{color:#0f1414}.btn:hover{color:#0f1414}}
 
-        .btn:hover { background: var(--primary-hover); }
+@media (max-width:760px){
+  .hero{padding:48px 0 40px}
+  .hero-grid{grid-template-columns:1fr;gap:26px}
+  .portrait{width:120px;height:120px;order:-1}
+}
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary);
-            border: 1px solid var(--primary);
-        }
+/* ============================================================
+   6. SECTIONS
+   ============================================================ */
+section{padding:64px 0;border-bottom:1px solid var(--border)}
+section:last-of-type{border-bottom:0}
+.sec-head{margin-bottom:34px}
+.sec-head .kicker{
+  display:block;font-size:.74rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:8px;
+}
+.sec-head p{color:var(--muted);max-width:65ch;margin:10px 0 0}
 
-        .btn-secondary:hover {
-            background: rgba(0, 82, 204, 0.05);
-        }
+/* Cartes */
+.grid{display:grid;gap:18px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:26px;transition:border-color .15s ease,transform .15s ease;
+}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card h3{margin-bottom:12px}
+.card ul{margin:0;padding-left:1.15em;color:var(--muted);font-size:.94rem}
+.card li{margin-bottom:6px}
+.card li::marker{color:var(--accent)}
 
-        /* Layout Grille (Sections) */
-        section { margin-bottom: 40px; }
+/* Timeline parcours */
+.timeline{border-left:2px solid var(--border);margin-left:8px;padding-left:28px}
+.tl-item{position:relative;padding-bottom:34px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-36px;top:7px;
+  width:11px;height:11px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--bg);box-sizing:content-box;
+}
+.tl-date{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.tl-item h3{margin:5px 0 2px}
+.tl-org{font-size:.92rem;color:var(--muted);font-style:italic}
+.tl-item ul{margin:10px 0 0;padding-left:1.15em;color:var(--muted);font-size:.94rem}
+.tl-item li{margin-bottom:5px}
+.tl-item li::marker{color:var(--accent)}
 
-        .section-title {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: var(--text-subtle);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 8px;
-        }
+/* Publications */
+.pub{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px 24px;margin-bottom:14px;
+  display:grid;grid-template-columns:auto 1fr;gap:0 20px;align-items:start;
+}
+.pub-year{
+  font-family:var(--serif);font-size:1.28rem;font-weight:600;color:var(--accent);
+  min-width:3.4ch;padding-top:2px;
+}
+.pub-title{font-weight:600;margin:0 0 5px;line-height:1.45}
+.pub-meta{font-size:.88rem;color:var(--muted);margin:0}
+.pub-meta em{color:var(--text)}
+.pub-doi{display:inline-block;font-size:.84rem;margin-top:8px;font-weight:600}
+.pub.highlight{border-left:3px solid var(--accent);background:var(--accent-soft)}
+.tag{
+  display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:#fff;background:var(--accent);
+  padding:3px 9px;border-radius:4px;margin-bottom:8px;
+}
+@media (prefers-color-scheme:dark){.tag{color:#0f1414}}
+@media (max-width:600px){
+  .pub{grid-template-columns:1fr;gap:6px}
+  .pub-year{font-size:1rem}
+}
 
-        /* Grille de Cartes pour l'Expertise */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+/* Conférences */
+.conf-list{list-style:none;margin:0;padding:0}
+.conf-list li{
+  padding:14px 0;border-bottom:1px dashed var(--border);
+  display:grid;grid-template-columns:120px 1fr;gap:16px;font-size:.94rem;
+}
+.conf-list li:last-child{border-bottom:0}
+.conf-where{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.conf-type{color:var(--accent);font-weight:600}
+@media (max-width:600px){.conf-list li{grid-template-columns:1fr;gap:3px}}
 
-        .card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 24px;
-            box-shadow: var(--shadow);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+/* Compétences — pastilles */
+.skills-block{margin-bottom:24px}
+.skills-block h3{margin-bottom:10px;font-size:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  font-size:.82rem;padding:5px 12px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--border);color:var(--muted);
+}
 
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
+/* Liens réseaux */
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.link-card{
+  display:flex;flex-direction:column;gap:3px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:18px 20px;color:var(--text);
+}
+.link-card:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-2px)}
+.link-card strong{font-size:.98rem}
+.link-card span{font-size:.82rem;color:var(--muted)}
 
-        .card h4 {
-            color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
+/* Contact */
+.contact-box{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:36px;text-align:center;
+}
+.contact-box p{color:var(--muted);max-width:52ch;margin:12px auto 0}
 
-        .card p, .card ul {
-            font-size: 0.95rem;
-            color: var(--text);
-        }
-
-        .card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .card li {
-            position: relative;
-            padding-left: 18px;
-            margin-bottom: 8px;
-        }
-
-        .card li::before {
-            content: "•";
-            color: var(--primary);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Style des Publications */
-        .pub-list { display: flex; flex-direction: column; gap: 15px; }
-
-        .pub-card {
-            background: var(--surface);
-            border-left: 4px solid var(--primary);
-            border-top: 1px solid var(--border);
-            border-right: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            border-radius: 0 var(--radius) var(--radius) 0;
-            padding: 20px;
-        }
-
-        .pub-title { font-weight: 700; font-size: 1rem; color: var(--text); }
-        .pub-meta { font-size: 0.9rem; color: var(--text-subtle); margin: 5px 0 10px 0; }
-        .pub-link { font-size: 0.85rem; font-weight: 600; color: var(--primary); text-decoration: none; }
-        .pub-link:hover { text-decoration: underline; }
-
-        /* Grille des Liens Sociaux/Académiques */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .social-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 15px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .social-card:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-            background: #fafbfc;
-        }
-
-        /* Gestion de l'affichage multilingue par classe CSS */
-        body.show-fr [lang="en"] { display: none !important; }
-        body.show-en [lang="fr"] { display: none !important; }
-    </style>
+/* Footer */
+footer{padding:34px 0;font-size:.84rem;color:var(--muted);text-align:center}
+</style>
 </head>
-<body class="show-fr">
 
-    <div class="top-bar">
-        <div class="container">
-            <span class="brand">Dr. Steven Compere</span>
-            <div class="lang-switch">
-                <button class="lang-btn active" id="btn-fr" onclick="setLanguage('fr')">FR</button>
-                <button class="lang-btn" id="btn-en" onclick="setLanguage('en')">EN</button>
-            </div>
-        </div>
+<body>
+<script>
+/* Choix de langue appliqué avant l'affichage pour éviter tout clignotement */
+(function(){
+  var saved = null;
+  try { saved = localStorage.getItem("sc-lang"); } catch(e){}
+  var lang = saved || ((navigator.language||"fr").toLowerCase().indexOf("fr")===0 ? "fr" : "en");
+  document.body.className = "show-" + lang;
+  document.documentElement.lang = lang;
+})();
+</script>
+
+<!-- ==================== NAVIGATION ==================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">Dr. Steven Compère</a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#profil"><span lang="fr">Profil</span><span lang="en">Profile</span></a>
+      <a href="#expertise"><span lang="fr">Expertise</span><span lang="en">Expertise</span></a>
+      <a href="#parcours"><span lang="fr">Parcours</span><span lang="en">Experience</span></a>
+      <a href="#publications"><span lang="fr">Publications</span><span lang="en">Publications</span></a>
+      <a href="#competences"><span lang="fr">Compétences</span><span lang="en">Skills</span></a>
+      <a href="#contact"><span lang="fr">Contact</span><span lang="en">Contact</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<main id="top">
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">
+        <span lang="fr">Chimie des matériaux &amp; matériaux poreux</span>
+        <span lang="en">Materials chemistry &amp; porous materials</span>
+      </span>
+      <h1>Dr. Steven Compère</h1>
+      <p class="role">
+        <span lang="fr">Docteur-Ingénieur en chimie des matériaux — carbones nanostructurés poreux</span>
+        <span lang="en">PhD Chemical Engineer in materials chemistry — nanostructured porous carbons</span>
+      </p>
+      <p class="pitch">
+        <span lang="fr">Je conçois et caractérise des carbones poreux nanostructurés issus de gabarits zéolithiques sacrificiels (<em>Zeolite-Templated Carbons</em>, ZTC), pour le stockage d'énergie et la capture du CO<sub>2</sub>. Mon parcours associe deux ans en industrie pharmaceutique sous environnement GMP à la recherche académique.</span>
+        <span lang="en">I design and characterise nanostructured porous carbons derived from sacrificial zeolite templates (<em>Zeolite-Templated Carbons</em>, ZTC), for energy storage and CO<sub>2</sub> capture. My background combines two years in the pharmaceutical industry under GMP conditions with academic research.</span>
+      </p>
+      <div class="actions">
+        <a class="btn" href="CV_Steven_Compere.pdf" target="_blank" rel="noopener">
+          <span lang="fr">Télécharger le CV (PDF)</span><span lang="en">Download CV (PDF)</span>
+        </a>
+        <a class="btn btn-ghost" href="mailto:compere.steven@gmail.com">
+          <span lang="fr">Me contacter</span><span lang="en">Get in touch</span>
+        </a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/steven-compere/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <img class="portrait" src="portrait.jpg" alt="Portrait de Steven Compère" width="170" height="170"
+         onerror="this.style.display='none'">
+  </div>
+</div>
+
+<!-- ==================== PROFIL ==================== -->
+<section id="profil">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Profil</span><span lang="en">Profile</span></span>
+      <h2><span lang="fr">Recherche appliquée aux matériaux poreux</span><span lang="en">Applied research on porous materials</span></h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3><span lang="fr">Ce que je fais</span><span lang="en">What I do</span></h3>
+        <p style="color:var(--muted);font-size:.95rem;margin:0">
+          <span lang="fr">Synthèse de carbones poreux par dépôt chimique en phase vapeur sur gabarits zéolithiques, mise en forme des poudres, et étude des capacités d'adsorption ainsi que des déformations induites sous haute pression. Le tout appuyé par une caractérisation multi-technique poussée des zéolithes et des carbones.</span>
+          <span lang="en">Synthesis of porous carbons by chemical vapour deposition over zeolite templates, powder shaping, and the study of adsorption capacities and pressure-induced deformations. All supported by extensive multi-technique characterisation of zeolites and carbons.</span>
+        </p>
+      </div>
+      <div class="card">
+        <h3><span lang="fr">Ce que j'apporte</span><span lang="en">What I bring</span></h3>
+        <p style="color:var(--muted);font-size:.95rem;margin:0">
+          <span lang="fr">La rigueur d'un environnement industriel réglementé (GMP/GLP, validation de méthodes analytiques) combinée à l'autonomie et à la gestion de projet acquises en R&amp;D académique : 6 publications, 1 brevet déposé, 9 communications en conférence, encadrement de stagiaire.</span>
+          <span lang="en">The rigour of a regulated industrial environment (GMP/GLP, analytical method validation) combined with the autonomy and project management developed in academic R&amp;D: 6 publications, 1 patent filed, 9 conference contributions, student supervision.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== EXPERTISE ==================== -->
+<section id="expertise">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Expertise</span><span lang="en">Expertise</span></span>
+      <h2><span lang="fr">Domaines d'expertise &amp; R&amp;D</span><span lang="en">Core expertise &amp; R&amp;D</span></h2>
+    </div>
+    <div class="grid grid-3">
+
+      <div class="card">
+        <h3><span lang="fr">Matériaux poreux &amp; carbonés</span><span lang="en">Porous &amp; carbon materials</span></h3>
+        <ul lang="fr">
+          <li>Synthèse de zéolithes (voie organique et inorganique).</li>
+          <li>Carbones à gabarit zéolithique (ZTC) par CVD.</li>
+          <li>Pyrolyse, activation chimique et physique.</li>
+          <li>Fonctionnalisation et mise en forme.</li>
+        </ul>
+        <ul lang="en">
+          <li>Zeolite synthesis (organic and inorganic routes).</li>
+          <li>Zeolite-templated carbons (ZTC) by CVD.</li>
+          <li>Pyrolysis, chemical and physical activation.</li>
+          <li>Functionalisation and shaping.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><span lang="fr">Adsorption &amp; physique des surfaces</span><span lang="en">Adsorption &amp; surface physics</span></h3>
+        <ul lang="fr">
+          <li>Sorption de gaz : N<sub>2</sub>, Ar, CO<sub>2</sub>, CH<sub>4</sub>, H<sub>2</sub>.</li>
+          <li>Analyse de texture : BET, NLDFT, QSDFT.</li>
+          <li>Adsorption haute pression et déformations induites.</li>
+          <li>Capture du carbone, purification gaz/liquide.</li>
+        </ul>
+        <ul lang="en">
+          <li>Gas sorption: N<sub>2</sub>, Ar, CO<sub>2</sub>, CH<sub>4</sub>, H<sub>2</sub>.</li>
+          <li>Textural analysis: BET, NLDFT, QSDFT.</li>
+          <li>High-pressure adsorption and induced deformation.</li>
+          <li>Carbon capture, gas/liquid purification.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><span lang="fr">Caractérisation avancée</span><span lang="en">Advanced characterisation</span></h3>
+        <ul lang="fr">
+          <li>Spectroscopie : Raman, XPS, FT-IR, UV-Vis, RPE.</li>
+          <li>RMN liquide et du solide, ICP-OES, CHNS.</li>
+          <li>DRX, porosimétrie mercure, pycnométrie He.</li>
+          <li>Microscopie MEB / MET, cartographie EDS-EDX.</li>
+        </ul>
+        <ul lang="en">
+          <li>Spectroscopy: Raman, XPS, FT-IR, UV-Vis, EPR.</li>
+          <li>Liquid and solid-state NMR, ICP-OES, CHNS.</li>
+          <li>XRD, mercury porosimetry, He pycnometry.</li>
+          <li>SEM / TEM microscopy, EDS-EDX mapping.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><span lang="fr">Science des poudres</span><span lang="en">Powder science</span></h3>
+        <ul lang="fr">
+          <li>Rhéomètre FT4, cellule de cisaillement Schulze.</li>
+          <li>Densités bulk / tapée, granulométrie laser.</li>
+          <li>Morphologie, conductivité électrique, DVS.</li>
+          <li>Écoulement et compressibilité des poudres.</li>
+        </ul>
+        <ul lang="en">
+          <li>FT4 rheometer, Schulze shear cell.</li>
+          <li>Bulk / tapped density, laser granulometry.</li>
+          <li>Morphology, electrical conductivity, DVS.</li>
+          <li>Powder flowability and compressibility.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><span lang="fr">Data science &amp; outils numériques</span><span lang="en">Data science &amp; digital tools</span></h3>
+        <ul lang="fr">
+          <li>Python pour le traitement de données.</li>
+          <li>Analyse multivariée (PCA), corrélation d'images (DIC).</li>
+          <li>ImageJ, OriginLab, LIMS, Biovia ELN.</li>
+          <li>Auto-formation en cours : COMSOL Multiphysics.</li>
+        </ul>
+        <ul lang="en">
+          <li>Python for data processing.</li>
+          <li>Multivariate analysis (PCA), digital image correlation (DIC).</li>
+          <li>ImageJ, OriginLab, LIMS, Biovia ELN.</li>
+          <li>Currently self-training: COMSOL Multiphysics.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><span lang="fr">Qualité &amp; gestion de projet</span><span lang="en">Quality &amp; project management</span></h3>
+        <ul lang="fr">
+          <li>Standards GMP / GLP, validation de méthodes.</li>
+          <li>Culture HSE, Lean Management, 5S.</li>
+          <li>Gestion de projet R&amp;D, encadrement, mentorat.</li>
+          <li>Communication scientifique et veille technologique.</li>
+        </ul>
+        <ul lang="en">
+          <li>GMP / GLP standards, method validation.</li>
+          <li>HSE culture, Lean Management, 5S.</li>
+          <li>R&amp;D project management, supervision, mentoring.</li>
+          <li>Scientific communication and technology watch.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PARCOURS ==================== -->
+<section id="parcours">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Parcours</span><span lang="en">Experience</span></span>
+      <h2><span lang="fr">Expériences professionnelles</span><span lang="en">Professional experience</span></h2>
     </div>
 
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-title">Dr. Steven Compere</h1>
-            <h2 class="hero-subtitle" lang="fr">Ingénieur Chimiste | Docteur en Chimie des Matériaux</h2>
-            <h2 class="hero-subtitle" lang="en">Chemical Engineer | PhD in Materials Chemistry</h2>
+    <div class="timeline">
 
-            <div class="cta-buttons">
-                <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="fr">Télécharger le CV (PDF)</a>
-                <a href="CV_Steven_Compere.pdf" class="btn" target="_blank" lang="en">Download Resume (PDF)</a>
-                <a href="mailto:compere.steven@gmail.com" class="btn btn-secondary" lang="fr">Me contacter</a>
-                <a href="mailto:compere.steven@gmail.com" class="btn btn-secondary" lang="en">Contact Me</a>
-            </div>
+      <div class="tl-item">
+        <div class="tl-date"><span lang="fr">Depuis juin 2026</span><span lang="en">Since June 2026</span></div>
+        <h3><span lang="fr">Chercheur post-doctoral</span><span lang="en">Postdoctoral researcher</span></h3>
+        <div class="tl-org">CEA Paris-Saclay — LEDNA, <span lang="fr">projet ANR CANELONI, France</span><span lang="en">ANR CANELONI project, France</span></div>
+        <ul lang="fr">
+          <li>Développement de membranes nanoporeuses à base de nanotubes de carbone verticalement alignés (VACNT).</li>
+          <li>Synthèse par CVD assistée par aérosol et caractérisations avancées.</li>
+        </ul>
+        <ul lang="en">
+          <li>Development of nanoporous membranes based on vertically aligned carbon nanotubes (VACNT).</li>
+          <li>Aerosol-assisted CVD synthesis and advanced characterisation.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date"><span lang="fr">Oct. 2022 — Oct. 2025</span><span lang="en">Oct. 2022 — Oct. 2025</span></div>
+        <h3><span lang="fr">Doctorant en chimie des matériaux</span><span lang="en">PhD candidate in materials chemistry</span></h3>
+        <div class="tl-org">IC2MP (Poitiers) &amp; LFCR (Anglet), France</div>
+        <ul lang="fr">
+          <li>Procédés de synthèse hybrides (voie solide et co-alimentation par CVD) pour la fonctionnalisation de ZTC — applications batteries, hydrogène, capture du CO<sub>2</sub>.</li>
+          <li>Mise en forme des ZTC, étude des capacités d'adsorption et des déformations induites sous pression (mission de 3 mois au LFCR).</li>
+          <li>Mise en évidence de l'influence du cation compensateur de la zéolithe sur les propriétés structurales et texturales des ZTC.</li>
+          <li>Synthèse d'un nouveau carbone microporeux (ZTC lamellaire) ayant abouti à un dépôt de brevet avec l'Université Nationale de Yokohama.</li>
+          <li>Missions de caractérisation : CEMHTI (Orléans, RMN du solide), LASIRe (Lille, RPE), LFCR (Anglet, déformations).</li>
+        </ul>
+        <ul lang="en">
+          <li>Hybrid synthesis routes (solid-state and CVD co-feeding) for ZTC functionalisation — battery, hydrogen and CO<sub>2</sub> capture applications.</li>
+          <li>ZTC shaping methodologies, adsorption capacity and pressure-induced deformation studies (3-month secondment at LFCR).</li>
+          <li>Demonstrated the influence of the zeolite counter-ion on the structural and textural properties of ZTC.</li>
+          <li>Synthesis of a new microporous carbon (lamellar ZTC), leading to a patent filing with Yokohama National University.</li>
+          <li>External characterisation campaigns: CEMHTI (Orléans, solid-state NMR), LASIRe (Lille, EPR), LFCR (Anglet, deformation).</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date"><span lang="fr">Sept. 2020 — Août 2022</span><span lang="en">Sept. 2020 — Aug. 2022</span></div>
+        <h3><span lang="fr">Ingénieur R&amp;D en science des matériaux</span><span lang="en">R&amp;D materials science engineer</span></h3>
+        <div class="tl-org"><span lang="fr">UCB Pharma, Braine-l'Alleud, Belgique — consultant Jefferson Wells</span><span lang="en">UCB Pharma, Braine-l'Alleud, Belgium — Jefferson Wells consultant</span></div>
+        <ul lang="fr">
+          <li>Gestion de projets de caractérisation physique des poudres en environnement GMP/GLP, incluant développement et validation de méthodes analytiques.</li>
+          <li>Collaboration avec les départements Formulation, Procédé et Production (innovation, troubleshooting).</li>
+          <li>Implémentation de la méthodologie 5S dans l'échantillothèque (5000+ échantillons) pour garantir traçabilité et intégrité des stocks.</li>
+        </ul>
+        <ul lang="en">
+          <li>Managed physical powder characterisation projects in a GMP/GLP environment, including analytical method development and validation.</li>
+          <li>Worked with Formulation, Process and Production departments on innovation and troubleshooting.</li>
+          <li>Implemented 5S methodology across the sample library (5,000+ samples) to ensure full traceability and stock integrity.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date"><span lang="fr">Sept. — Déc. 2019</span><span lang="en">Sept. — Dec. 2019</span></div>
+        <h3><span lang="fr">Stagiaire en science des matériaux (master)</span><span lang="en">Materials science intern (master's)</span></h3>
+        <div class="tl-org"><span lang="fr">UCB Pharma, Braine-l'Alleud, Belgique</span><span lang="en">UCB Pharma, Braine-l'Alleud, Belgium</span></div>
+        <ul lang="fr">
+          <li>Création d'une base de données de référence pour les excipients et application de l'analyse multivariée (PCA).</li>
+          <li>Optimisation de la stratégie analytique par identification des tests redondants.</li>
+        </ul>
+        <ul lang="en">
+          <li>Built a reference database for excipients and applied multivariate analysis (PCA).</li>
+          <li>Optimised the analytical strategy by identifying redundant tests.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-date"><span lang="fr">Janv. — Mai 2017</span><span lang="en">Jan. — May 2017</span></div>
+        <h3><span lang="fr">Stagiaire en chimie analytique (bachelier)</span><span lang="en">Analytical chemistry intern (bachelor's)</span></h3>
+        <div class="tl-org"><span lang="fr">TotalEnergies, Feluy, Belgique</span><span lang="en">TotalEnergies, Feluy, Belgium</span></div>
+        <ul lang="fr">
+          <li>Synthèse de catalyseurs métallocènes sur support silice.</li>
+          <li>Protocole de diagnostic par spectrométrie UV-Vis en réflexion diffuse (DRUVv) pour l'analyse des états d'activation.</li>
+        </ul>
+        <ul lang="en">
+          <li>Synthesis of silica-supported metallocene catalysts.</li>
+          <li>Diagnostic protocol by diffuse reflectance UV-Vis spectroscopy (DRUVv) for activation state analysis.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FORMATION ==================== -->
+<section id="formation">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Formation</span><span lang="en">Education</span></span>
+      <h2><span lang="fr">Diplômes</span><span lang="en">Degrees</span></h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="tl-date">2022 — 2025</div>
+        <h3><span lang="fr">Doctorat en chimie des matériaux</span><span lang="en">PhD in materials chemistry</span></h3>
+        <p class="tl-org" style="margin:2px 0 10px"><span lang="fr">Université de Poitiers, France</span><span lang="en">University of Poitiers, France</span></p>
+        <p style="font-size:.92rem;color:var(--muted);margin:0">
+          <span lang="fr">Thèse : « <em>Zeolite-Templated Carbons</em> : synthèse, fonctionnalisation, mise en forme et étude des déformations induites par l'adsorption de gaz à haute pression ».<br>Direction : A. Sachse, I. Batonneau-Gener, L. Perrier.</span>
+          <span lang="en">Thesis: “<em>Zeolite-Templated Carbons</em>: synthesis, functionalisation, shaping and study of deformations induced by high-pressure gas adsorption”.<br>Supervisors: A. Sachse, I. Batonneau-Gener, L. Perrier.</span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="tl-date">2017 — 2020</div>
+        <h3><span lang="fr">Diplôme d'ingénieur industriel en chimie</span><span lang="en">Industrial engineering degree in chemistry</span></h3>
+        <p class="tl-org" style="margin:2px 0 10px"><span lang="fr">HELHa, Belgique</span><span lang="en">HELHa, Belgium</span></p>
+        <p style="font-size:.92rem;color:var(--muted);margin:0">
+          <span lang="fr">Mémoire : « Caractérisation physique d'excipients pharmaceutiques ».</span>
+          <span lang="en">Thesis: “Physical characterisation of pharmaceutical excipients”.</span>
+        </p>
+      </div>
+      <div class="card">
+        <div class="tl-date">2014 — 2017</div>
+        <h3><span lang="fr">Bachelier en chimie appliquée</span><span lang="en">BSc in applied chemistry</span></h3>
+        <p class="tl-org" style="margin:2px 0 10px"><span lang="fr">HELHa, Belgique</span><span lang="en">HELHa, Belgium</span></p>
+        <p style="font-size:.92rem;color:var(--muted);margin:0">
+          <span lang="fr">Mémoire : analyse de catalyseurs métallocènes en pétrochimie par spectroscopie UV-Vis en réflexion diffuse.</span>
+          <span lang="en">Thesis: analysis of metallocene catalysts in petrochemistry by diffuse reflectance UV-Vis spectroscopy.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PUBLICATIONS ==================== -->
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Recherche</span><span lang="en">Research</span></span>
+      <h2><span lang="fr">Publications &amp; brevet</span><span lang="en">Publications &amp; patent</span></h2>
+      <p>
+        <span lang="fr">6 articles publiés, 1 brevet déposé. Quatre articles supplémentaires sont en préparation, dont une revue.</span>
+        <span lang="en">6 published articles, 1 patent filed. Four further papers are in preparation, including a review.</span>
+      </p>
+    </div>
+
+    <div class="pub highlight">
+      <div class="pub-year">2025</div>
+      <div>
+        <span class="tag"><span lang="fr">Brevet</span><span lang="en">Patent</span></span>
+        <p class="pub-title">Porous carbon-based material and method for producing porous carbon-based material</p>
+        <p class="pub-meta">
+          <strong>S. Compère</strong>, I. Batonneau-Gener, A. Sachse, Y. Kubota, S. Satoshi —
+          <span lang="fr"><em>Demande de brevet japonais n° 25006</em>, déposée le 17 septembre 2025.</span>
+          <span lang="en"><em>Japanese patent application no. 25006</em>, filed 17 September 2025.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-year">2026</div>
+      <div>
+        <p class="pub-title">Influence of the zeolite counter-ion on the properties of zeolite-templated carbons</p>
+        <p class="pub-meta"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, A. Sachse — <em>Microporous and Mesoporous Materials</em>, 2026, 407, 114107.</p>
+        <a class="pub-doi" href="https://doi.org/10.1016/j.micromeso.2026.114107" target="_blank" rel="noopener">DOI: 10.1016/j.micromeso.2026.114107 →</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-year">2025</div>
+      <div>
+        <p class="pub-title">Zeolite-templated carbon pellets by in situ generated binder: deformation behavior under high-pressure CO<sub>2</sub> adsorption</p>
+        <p class="pub-meta"><strong>S. Compère</strong>, R. Minhas, I. Batonneau-Gener, C. Miqueu, L. Perrier, A. Sachse — <em>Microporous and Mesoporous Materials</em>, 2025, 399, 113837.</p>
+        <a class="pub-doi" href="https://doi.org/10.1016/j.micromeso.2025.113837" target="_blank" rel="noopener">DOI: 10.1016/j.micromeso.2025.113837 →</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-year">2024</div>
+      <div>
+        <p class="pub-title">N,S-doped zeolite-templated carbon like supported Ni<sub>4</sub>Fe<sub>4</sub>S<sub>8</sub> as an efficient bifunctional catalyst for rechargeable zinc–air batteries</p>
+        <p class="pub-meta">L. Loupias, R. Boulé, N. Benbakoura, <strong>S. Compère</strong>, J. Rousseau, L. Mazière, F. Pailloux, V. Mauchamp, J. Pacaud, S. Célérier, K. Servat, T. W. Napporn, C. Morais, A. Sachse, A. Habrioux — <em>ChemCatChem</em>, 2024, 16(22), e202400555.</p>
+        <a class="pub-doi" href="https://doi.org/10.1002/cctc.202400555" target="_blank" rel="noopener">DOI: 10.1002/cctc.202400555 →</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-year">2024</div>
+      <div>
+        <p class="pub-title">Impact of thermal ethylene degradation in zeolite-templated carbon synthesis</p>
+        <p class="pub-meta">T. Aumond, <strong>S. Compère</strong>, A. Sachse — <em>Microporous and Mesoporous Materials</em>, 2024, 367, 112967.</p>
+        <a class="pub-doi" href="https://doi.org/10.1016/j.micromeso.2023.112967" target="_blank" rel="noopener">DOI: 10.1016/j.micromeso.2023.112967 →</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-year">2023</div>
+      <div>
+        <p class="pub-title">Acidity: a key parameter in zeolite-templated carbon formation</p>
+        <p class="pub-meta">T. Aumond, H. Vezin, I. Batonneau-Gener, <strong>S. Compère</strong>, Y. Pouilloux, A. Le Person, A. Moissette, A. Sachse — <em>Small</em>, 2023, 19, 2300972.</p>
+        <a class="pub-doi" href="https://doi.org/10.1002/smll.202300972" target="_blank" rel="noopener">DOI: 10.1002/smll.202300972 →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== CONFÉRENCES ==================== -->
+<section id="conferences">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Diffusion</span><span lang="en">Dissemination</span></span>
+      <h2><span lang="fr">Communications en conférence</span><span lang="en">Conference contributions</span></h2>
+      <p>
+        <span lang="fr">9 communications entre 2023 et 2025, dont 5 présentations orales. Sélection ci-dessous.</span>
+        <span lang="en">9 contributions between 2023 and 2025, including 5 oral presentations. Selection below.</span>
+      </p>
+    </div>
+
+    <ul class="conf-list">
+      <li>
+        <div class="conf-where">FOA 2025<br><span style="font-weight:400;text-transform:none;letter-spacing:0">Porto, PT</span></div>
+        <div>
+          <span class="conf-type"><span lang="fr">Oral</span><span lang="en">Oral</span> — </span>
+          Self-supported zeolite-templated carbon wafers for gas adsorption and induced deformation studies.
         </div>
-    </header>
+      </li>
+      <li>
+        <div class="conf-where">GFZ 2025<br><span style="font-weight:400;text-transform:none;letter-spacing:0">Blériot-Plage, FR</span></div>
+        <div>
+          <span class="conf-type"><span lang="fr">Oral</span><span lang="en">Oral</span> — </span>
+          From solid precursors to zeolite-templated carbons: a molecular odyssey toward porous carbon materials.
+        </div>
+      </li>
+      <li>
+        <div class="conf-where">ZMPC 2024<br><span style="font-weight:400;text-transform:none;letter-spacing:0">Osaka, JP</span></div>
+        <div>
+          <span class="conf-type">Poster — </span>
+          Zeolite-templated carbons: a new solid-state synthesis route.
+        </div>
+      </li>
+      <li>
+        <div class="conf-where">FEZA 2023<br><span style="font-weight:400;text-transform:none;letter-spacing:0">Portorož, SI</span></div>
+        <div>
+          <span class="conf-type"><span lang="fr">Oral</span><span lang="en">Oral</span> — </span>
+          Advances in zeolite-templated carbon synthesis: investigating the effect of temperature and zeolite acidity.
+        </div>
+      </li>
+      <li>
+        <div class="conf-where">GFZ 2023<br><span style="font-weight:400;text-transform:none;letter-spacing:0">Obernai, FR</span></div>
+        <div>
+          <span class="conf-type"><span lang="fr">Oral</span><span lang="en">Oral</span> — </span>
+          Impact of the ethylene transformation mechanism in the synthesis of zeolite-templated carbons.
+        </div>
+      </li>
+      <li>
+        <div class="conf-where">C'Nano 2023<br><span style="font-weight:400;text-transform:none;letter-spacing:0">Poitiers, FR</span></div>
+        <div>
+          <span class="conf-type">Poster — </span>
+          Micropore 3D graphenes: circumventing essential issues in large scale synthesis.
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
 
-    <main class="container">
+<!-- ==================== COMPÉTENCES ==================== -->
+<section id="competences">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Compétences</span><span lang="en">Skills</span></span>
+      <h2><span lang="fr">Techniques &amp; outils</span><span lang="en">Techniques &amp; tools</span></h2>
+    </div>
 
-        <!-- DOMAINES D'EXPERTISE -->
-        <section>
-            <h3 class="section-title" lang="fr">Domaines d'Expertise & R&D</h3>
-            <h3 class="section-title" lang="en">Core Expertise & R&D</h3>
+    <div class="skills-block">
+      <h3><span lang="fr">Synthèse</span><span lang="en">Synthesis</span></h3>
+      <div class="chips">
+        <span class="chip">CVD</span><span class="chip"><span lang="fr">CVD assistée par aérosol</span><span lang="en">Aerosol-assisted CVD</span></span>
+        <span class="chip"><span lang="fr">Synthèse hydrothermale</span><span lang="en">Hydrothermal synthesis</span></span>
+        <span class="chip"><span lang="fr">Synthèse organique</span><span lang="en">Organic synthesis</span></span>
+        <span class="chip"><span lang="fr">Pyrolyse</span><span lang="en">Pyrolysis</span></span>
+        <span class="chip"><span lang="fr">Activation</span><span lang="en">Activation</span></span>
+        <span class="chip"><span lang="fr">Manipulation HF</span><span lang="en">HF handling</span></span>
+        <span class="chip"><span lang="fr">Supports catalytiques</span><span lang="en">Catalyst supports</span></span>
+      </div>
+    </div>
 
-            <div class="grid-2">
-                <div class="card">
-                    <h4 lang="fr">Matériaux Poreux & Carbonés</h4>
-                    <h4 lang="en">Porous & Carbon Materials</h4>
-                    <ul lang="fr">
-                        <li>Synthèse, pyrolyse et activation (chimique/physique).</li>
-                        <li>Charbons actifs et carbones structurés sur mesure.</li>
-                        <li>Modification et ingénierie de surface.</li>
-                    </ul>
-                    <ul lang="en">
-                        <li>Synthesis, pyrolysis, and activation (chemical/physical).</li>
-                        <li>Tailored activated carbons and structured carbons.</li>
-                        <li>Surface engineering and functionalization.</li>
-                    </ul>
-                </div>
+    <div class="skills-block">
+      <h3><span lang="fr">Caractérisation</span><span lang="en">Characterisation</span></h3>
+      <div class="chips">
+        <span class="chip">Raman</span><span class="chip">XPS</span><span class="chip">FT-IR</span><span class="chip">UV-Vis</span>
+        <span class="chip">ICP-OES</span><span class="chip">RPE / EPR</span><span class="chip">RMN / NMR</span>
+        <span class="chip"><span lang="fr">DRX</span><span lang="en">XRD</span></span>
+        <span class="chip"><span lang="fr">Sorption de gaz</span><span lang="en">Gas sorption</span></span>
+        <span class="chip"><span lang="fr">Porosimétrie Hg</span><span lang="en">Hg porosimetry</span></span>
+        <span class="chip"><span lang="fr">Pycnométrie He</span><span lang="en">He pycnometry</span></span>
+        <span class="chip">CHNS</span><span class="chip">ATG / DSC</span><span class="chip">GC</span>
+        <span class="chip"><span lang="fr">MEB-EDX</span><span lang="en">SEM-EDX</span></span>
+        <span class="chip"><span lang="fr">MET</span><span lang="en">TEM</span></span>
+      </div>
+    </div>
 
-                <div class="card">
-                    <h4 lang="fr">Adsorption & Physique des Surfaces</h4>
-                    <h4 lang="en">Adsorption & Surface Physics</h4>
-                    <ul lang="fr">
-                        <li>Physisorption de gaz ($N_2$, $Ar$, $CO_2$).</li>
-                        <li>Analyse de texture : BET, NLDFT, QSDFT.</li>
-                        <li>Capture de carbone et purification gaz/liquide.</li>
-                    </ul>
-                    <ul lang="en">
-                        <li>Gas physisorption ($N_2$, $Ar$, $CO_2$).</li>
-                        <li>Textural analysis: BET, NLDFT, QSDFT models.</li>
-                        <li>Carbon capture and gas/liquid purification.</li>
-                    </ul>
-                </div>
+    <div class="skills-block">
+      <h3><span lang="fr">Science des poudres</span><span lang="en">Powder science</span></h3>
+      <div class="chips">
+        <span class="chip">FT4</span><span class="chip"><span lang="fr">Cellule Schulze</span><span lang="en">Schulze cell</span></span>
+        <span class="chip"><span lang="fr">Densités bulk / tapée</span><span lang="en">Bulk / tapped density</span></span>
+        <span class="chip"><span lang="fr">Granulométrie laser</span><span lang="en">Laser granulometry</span></span>
+        <span class="chip">DVS</span><span class="chip"><span lang="fr">Conductivité électrique</span><span lang="en">Electrical conductivity</span></span>
+      </div>
+    </div>
 
-                <div class="card">
-                    <h4 lang="fr">Caractérisation Avancée</h4>
-                    <h4 lang="en">Advanced Characterization</h4>
-                    <ul lang="fr">
-                        <li>Diffraction des rayons X (DRX).</li>
-                        <li>Spectroscopie XPS et FTIR.</li>
-                        <li>Microscopie MEB-EDX.</li>
-                        <li>Analyse thermique ATG / ATD.</li>
-                    </ul>
-                    <ul lang="en">
-                        <li>X-Ray Diffraction (XRD).</li>
-                        <li>XPS and FTIR spectroscopy.</li>
-                        <li>SEM-EDX electron microscopy.</li>
-                        <li>Thermal analysis TGA / DTA.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <div class="skills-block">
+      <h3><span lang="fr">Numérique</span><span lang="en">Digital</span></h3>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">OriginLab</span><span class="chip">ImageJ</span>
+        <span class="chip">PCA</span><span class="chip">DIC</span><span class="chip">LIMS</span>
+        <span class="chip">Biovia ELN</span><span class="chip">MS Office</span><span class="chip">COMSOL <span lang="fr">(en cours)</span><span lang="en">(in progress)</span></span>
+      </div>
+    </div>
 
-        <!-- PUBLICATIONS SÉLECTIONNÉES -->
-        <section>
-            <h3 class="section-title" lang="fr">Publications Sélectionnées</h3>
-            <h3 class="section-title" lang="en">Selected Publications</h3>
+    <div class="skills-block">
+      <h3><span lang="fr">Langues</span><span lang="en">Languages</span></h3>
+      <div class="chips">
+        <span class="chip"><span lang="fr">Français — natif</span><span lang="en">French — native</span></span>
+        <span class="chip"><span lang="fr">Anglais — C1</span><span lang="en">English — C1</span></span>
+      </div>
+    </div>
 
-            <div class="pub-list">
-                <div class="pub-card">
-                    <div class="pub-title">Titre de votre publication principale 1</div>
-                    <div class="pub-meta">S. Compere, et al. — <em>Nom de la Revue</em>, Année</div>
-                    <a href="https://doi.org/VOTRE_DOI_1" class="pub-link" target="_blank" rel="noopener">Consulter l'article (DOI) →</a>
-                </div>
+    <div class="skills-block">
+      <h3><span lang="fr">Encadrement &amp; engagements</span><span lang="en">Leadership &amp; involvement</span></h3>
+      <div class="chips">
+        <span class="chip"><span lang="fr">Encadrement d'un stagiaire M1 (synthèse organique)</span><span lang="en">Supervision of an MSc1 intern (organic synthesis)</span></span>
+        <span class="chip"><span lang="fr">Représentant élu au conseil de laboratoire, IC2MP</span><span lang="en">Elected lab council representative, IC2MP</span></span>
+        <span class="chip"><span lang="fr">Organisation de journées scientifiques, Picta'Sciences</span><span lang="en">Scientific event organisation, Picta'Sciences</span></span>
+      </div>
+    </div>
+  </div>
+</section>
 
-                <div class="pub-card">
-                    <div class="pub-title">Titre de votre publication principale 2</div>
-                    <div class="pub-meta">S. Compere, et al. — <em>Nom de la Revue</em>, Année</div>
-                    <a href="https://doi.org/VOTRE_DOI_2" class="pub-link" target="_blank" rel="noopener">Consulter l'article (DOI) →</a>
-                </div>
-            </div>
-        </section>
+<!-- ==================== RÉSEAUX ==================== -->
+<section id="reseaux">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span lang="fr">Réseaux</span><span lang="en">Networks</span></span>
+      <h2><span lang="fr">Profils scientifiques</span><span lang="en">Scientific profiles</span></h2>
+    </div>
+    <div class="links">
+      <a class="link-card" href="https://scholar.google.com/citations?hl=fr&amp;user=AmX65-sAAAAJ" target="_blank" rel="noopener">
+        <strong>Google Scholar</strong>
+        <span lang="fr">Publications et citations</span><span lang="en">Publications and citations</span>
+      </a>
+      <a class="link-card" href="https://orcid.org/0009-0006-3474-8748" target="_blank" rel="noopener">
+        <strong>ORCID</strong>
+        <span>0009-0006-3474-8748</span>
+      </a>
+      <a class="link-card" href="https://www.linkedin.com/in/steven-compere/" target="_blank" rel="noopener">
+        <strong>LinkedIn</strong>
+        <span lang="fr">Parcours professionnel</span><span lang="en">Professional profile</span>
+      </a>
+      <a class="link-card" href="https://www.researchgate.net/profile/Steven-Compere" target="_blank" rel="noopener">
+        <strong>ResearchGate</strong>
+        <span lang="fr">Travaux et collaborations</span><span lang="en">Works and collaborations</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-        <!-- RESEAUX & PROFIL -->
-        <section>
-            <h3 class="section-title" lang="fr">Profils Scientifiques & Réseaux</h3>
-            <h3 class="section-title" lang="en">Scientific Profiles & Networks</h3>
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2><span lang="fr">Travaillons ensemble</span><span lang="en">Let's work together</span></h2>
+      <p>
+        <span lang="fr">Ouvert aux collaborations de recherche, aux projets R&amp;D industriels et aux échanges autour des matériaux poreux.</span>
+        <span lang="en">Open to research collaborations, industrial R&amp;D projects and discussions around porous materials.</span>
+      </p>
+      <div class="actions" style="justify-content:center">
+        <a class="btn" href="mailto:compere.steven@gmail.com">compere.steven@gmail.com</a>
+        <a class="btn btn-ghost" href="CV_Steven_Compere.pdf" target="_blank" rel="noopener">
+          <span lang="fr">Télécharger le CV</span><span lang="en">Download CV</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
 
-            <div class="social-grid">
-                <a href="https://scholar.google.com/citations?hl=fr&user=AmX65-sAAAAJ" class="social-card" target="_blank" rel="noopener">Google Scholar</a>
-                <a href="https://orcid.org/my-orcid?orcid=0009-0006-3474-8748" class="social-card" target="_blank" rel="noopener">ORCID</a>
-                <a href="https://www.linkedin.com/in/steven-compere/" class="social-card" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://www.researchgate.net/profile/Steven-Compere?ev=hdr_xprf" class="social-card" target="_blank" rel="noopener">ResearchGate</a>
-            </div>
-        </section>
+<footer>
+  <div class="wrap">
+    <p style="margin:0">
+      <span lang="fr">© <span id="year">2026</span> Steven Compère — Poitiers / Paris-Saclay, France</span>
+      <span lang="en">© <span id="year-en">2026</span> Steven Compère — Poitiers / Paris-Saclay, France</span>
+    </p>
+  </div>
+</footer>
 
-    </main>
+<script>
+/* ---- Bascule FR / EN ---- */
+function setLang(l){
+  document.body.className = "show-" + l;
+  document.documentElement.lang = l;
+  try { localStorage.setItem("sc-lang", l); } catch(e){}
+  document.querySelectorAll(".lang-btn").forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false");
+  });
+}
+document.querySelectorAll(".lang-btn").forEach(function(b){
+  b.addEventListener("click", function(){ setLang(b.dataset.lang); });
+});
+/* Synchronise les boutons avec la langue déjà appliquée au chargement */
+setLang(document.body.classList.contains("show-en") ? "en" : "fr");
 
-    <script>
-        function setLanguage(lang) {
-            if (lang !== 'fr' && lang !== 'en') lang = 'fr';
-            document.body.className = (lang === 'fr') ? 'show-fr' : 'show-en';
-            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            document.documentElement.lang = lang;
-            localStorage.setItem('preferred_lang', lang);
-        }
-
-        const savedLang = localStorage.getItem('preferred_lang');
-        const browserLang = (navigator.language || '').toLowerCase();
-        const initialLang = savedLang || (browserLang.startsWith('fr') ? 'fr' : 'en');
-        setLanguage(initialLang);
-    </script>
-
+/* ---- Année automatique dans le pied de page ---- */
+var y = new Date().getFullYear();
+["year","year-en"].forEach(function(id){
+  var el = document.getElementById(id);
+  if (el) el.textContent = y;
+});
+</script>
 </body>
 </html>
