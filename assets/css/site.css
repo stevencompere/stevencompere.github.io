@@ -143,7 +143,6 @@ html[lang="en"] [lang="fr"]{display:none!important}
 .status .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid #2f9e6a;opacity:.35}
 .hero h1{font-size:clamp(2.7rem,7.2vw,4.9rem);font-weight:560;letter-spacing:-.028em;line-height:1.02}
 .hero .role{margin:14px 0 0;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.2rem,2.6vw,1.6rem);color:var(--accent);letter-spacing:-.005em}
-.hero .lead{max-width:58ch;margin:22px 0 0;font-size:clamp(1.03rem,1.6vw,1.14rem);color:var(--ink-2)}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 .btn{
   display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:10px;
@@ -200,7 +199,7 @@ html[lang="en"] [lang="fr"]{display:none!important}
 /* ---------- 7. PROFIL ---------- */
 .about{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(32px,6vw,72px);align-items:start}
 .about-text p{font-size:1.12rem;color:var(--ink-2)}
-.about-text p:first-child{font-family:var(--serif);font-size:clamp(1.3rem,2.3vw,1.55rem);line-height:1.45;color:var(--ink);letter-spacing:-.01em}
+.about-text p:first-child{font-family:var(--serif);font-size:clamp(1.2rem,2vw,1.42rem);line-height:1.5;color:var(--ink);letter-spacing:-.01em}
 .facts{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:8px 24px}
 .facts div{padding:14px 0;border-bottom:1px solid var(--line)}
 .facts div:last-child{border-bottom:0}
