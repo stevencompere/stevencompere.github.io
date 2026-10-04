@@ -13,7 +13,8 @@ depuis la branche `main`, avec le domaine défini dans `CNAME`.
 | `assets/js/site.js` | Bascule FR/EN, menu mobile, lien actif, animations |
 | `assets/fonts/` | Polices auto-hébergées (Source Serif 4, IBM Plex Sans et Mono, licence OFL) |
 | `assets/img/` | Favicon, icône Apple et image d'aperçu pour les partages (`og-card.png`, 1200×630) |
-| `CV_Steven_Compere.pdf` | CV téléchargeable depuis le site |
+| `CV_Steven_Compere.pdf` | CV en français, proposé quand la page est en français |
+| `CV_Steven_Compere_EN.pdf` | CV en anglais, proposé quand la page est en anglais |
 | `portrait.jpg` | Photo de profil |
 
 ## Modifier le contenu
@@ -32,7 +33,8 @@ Le lien `https://stevencompere.com/?lang=en` ouvre directement la version anglai
 les auteurs, la revue et le DOI. Mettre à jour les compteurs (bandeau de chiffres en haut de
 page et pastilles au-dessus de la liste).
 
-**Mettre à jour le CV** : remplacer `CV_Steven_Compere.pdf` en gardant le même nom de fichier.
+**Mettre à jour le CV** : remplacer `CV_Steven_Compere.pdf` (français) et/ou `CV_Steven_Compere_EN.pdf`
+(anglais) en gardant exactement les mêmes noms de fichiers.
 
 **Changer une couleur** : modifier les variables `--accent`, `--ink`, etc. au début de
 `assets/css/site.css` (bloc `:root` pour le mode clair, bloc `prefers-color-scheme: dark`
