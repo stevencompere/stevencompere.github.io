@@ -1,6 +1,6 @@
 # stevencompere.com
 
-Site personnel de Steven Compère, docteur-ingénieur en chimie des matériaux.
+Site personnel de Steven Compère, docteur en chimie des matériaux et ingénieur chimiste.
 Site statique (HTML/CSS/JS, sans dépendance ni étape de compilation) publié par GitHub Pages
 depuis la branche `main`, avec le domaine défini dans `CNAME`.
 
