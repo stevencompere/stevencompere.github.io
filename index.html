@@ -31,7 +31,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.css?v=20261113">
 
 <!-- Langue appliquée avant l'affichage (pas de clignotement).
      Ordre : ?lang=en dans l'URL > choix mémorisé > langue du navigateur.
@@ -89,7 +89,7 @@
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M8.5 7H17v8.5"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="i-code" viewBox="0 0 24 24"><path d="m8.5 8-4 4 4 4M15.5 8l4 4-4 4"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
 </svg>
 
 <!-- ==================== NAVIGATION ==================== -->
@@ -168,15 +168,6 @@
       <figcaption>Paris-Saclay, France</figcaption>
     </figure>
   </div>
-
-  <div class="wrap">
-    <dl class="metrics">
-      <div class="metric"><dt><span lang="fr">articles dans des revues à comité de lecture</span><span lang="en">peer-reviewed journal articles</span></dt><dd>6</dd></div>
-      <div class="metric"><dt><span lang="fr">demande de brevet (Japon, 2025)</span><span lang="en">patent application (Japan, 2025)</span></dt><dd>1</dd></div>
-      <div class="metric"><dt><span lang="fr">communications en congrès, dont 5 orales</span><span lang="en">conference contributions, incl. 5 talks</span></dt><dd>8</dd></div>
-      <div class="metric"><dt><span lang="fr">années de R&amp;D, en recherche et en industrie</span><span lang="en">years of R&amp;D in academia and industry</span></dt><dd>5+</dd></div>
-    </dl>
-  </div>
 </section>
 
 <!-- ==================== 01 PROFIL ==================== -->
@@ -193,21 +184,11 @@
           <span lang="en">A PhD graduate of the University of Poitiers (IC2MP), now a postdoctoral researcher at CEA Paris-Saclay on the ANR CANELONI project, I specialise in nanostructured micro- and mesoporous carbon materials, in particular aligned carbon nanotubes and zeolite-templated carbons.</span>
         </p>
         <p>
-          <span lang="fr">Mes travaux portent sur l'optimisation de procédés de synthèse par CVD catalytique, ainsi que sur la fonctionnalisation et la mise en forme de ces matériaux, en vue d'applications en adsorption, électrocatalyse, filtration et nanofluidique. Ils ont donné lieu à une demande de brevet et à six articles. Je maîtrise un large éventail de techniques de caractérisation physico-chimique (MEB, MET, Raman, XPS, DRX, physisorption, ATG, RMN du solide, RPE).</span>
-          <span lang="en">My work covers the optimisation of catalytic CVD synthesis processes, as well as the functionalisation and shaping of these materials, towards applications in adsorption, electrocatalysis, filtration and nanofluidics. It has led to a patent application and six articles. I am proficient in a broad range of physico-chemical characterisation techniques (SEM, TEM, Raman, XPS, XRD, physisorption, TGA, solid-state NMR, EPR).</span>
-        </p>
-        <p>
-          <span lang="fr">Cette expertise académique est complétée par deux années de R&amp;D chez UCB Pharma, consacrées à la caractérisation physique des poudres en environnement GMP&nbsp;: développement et validation de méthodes, traçabilité et travail à l'interface entre formulation, procédés et production.</span>
-          <span lang="en">This academic expertise is complemented by two years of R&amp;D at UCB Pharma dedicated to the physical characterisation of powders in a GMP environment: method development and validation, traceability and work at the interface between formulation, process and production.</span>
-        </p>
-        <p>
-          <span lang="fr">À l'aise avec les environnements numériques et les outils d'IA, comme Claude Code, j'assimile rapidement de nouveaux outils logiciels.</span>
-          <span lang="en">Comfortable with digital environments and AI tools such as Claude Code, I quickly get to grips with new software.</span>
+          <span lang="fr">Mes travaux portent sur l'optimisation de procédés de synthèse par CVD catalytique, ainsi que sur la fonctionnalisation et la mise en forme de ces matériaux, en vue d'applications en adsorption, électrocatalyse, filtration et nanofluidique. Cette expertise académique est complétée par deux années de R&amp;D chez UCB Pharma, consacrées à la caractérisation physique des poudres en environnement GMP.</span>
+          <span lang="en">My work covers the optimisation of catalytic CVD synthesis processes, as well as the functionalisation and shaping of these materials, towards applications in adsorption, electrocatalysis, filtration and nanofluidics. This academic expertise is complemented by two years of R&amp;D at UCB Pharma dedicated to the physical characterisation of powders in a GMP environment.</span>
         </p>
       </div>
       <dl class="facts reveal">
-        <div><dt><span lang="fr">Poste actuel</span><span lang="en">Current position</span></dt>
-          <dd><span lang="fr">Chercheur post-doctoral, CEA Paris-Saclay (NIMBE / LEDNA)</span><span lang="en">Postdoctoral researcher, CEA Paris-Saclay (NIMBE / LEDNA)</span></dd></div>
         <div><dt><span lang="fr">Doctorat</span><span lang="en">PhD</span></dt>
           <dd><span lang="fr">Chimie des matériaux, Université de Poitiers, 2025</span><span lang="en">Materials chemistry, University of Poitiers, 2025</span></dd></div>
         <div><dt><span lang="fr">Diplôme d'ingénieur</span><span lang="en">Engineering degree</span></dt>
@@ -223,7 +204,8 @@
   </div>
 </section>
 
-<!-- ==================== 02 PARCOURS ==================== -->
+<!-- ==================== 02 PARCOURS ====================
+     Une phrase par poste : le détail des missions est dans le CV (PDF). -->
 <section class="section" id="parcours">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -242,17 +224,11 @@
             <h3><span lang="fr">Chercheur post-doctoral</span><span lang="en">Postdoctoral researcher</span></h3>
             <span class="tag"><span lang="fr">En poste</span><span lang="en">Current</span></span>
           </div>
-          <p class="tl-org">CEA Paris-Saclay, <span lang="fr">laboratoire</span><span lang="en">laboratory</span> NIMBE / LEDNA <span class="note">· <span lang="fr">croissance de nanotubes de carbone et membranes</span><span lang="en">carbon nanotube growth and membranes</span></span></p>
-          <ul lang="fr">
-            <li>Projet ANR CANELONI (membranes à base de nanotubes de carbone alignés)&nbsp;: croissance de tapis de VACNT par CVD catalytique assistée par aérosol (paramètres, précurseurs, catalyseur ferrocène).</li>
-            <li>Caractérisation des tapis (MEB, MET, Raman, ATG) et interprétation (qualité, diamètre des nanotubes, densité, alignement) pour piloter les conditions de croissance.</li>
-            <li>Fabrication de membranes nanoporeuses, dont gravure plasma RIE&nbsp;; proposition de nouveaux modes opératoires et axes de recherche (promoteur soufré, substrats zéolithiques nanostructurés).</li>
-          </ul>
-          <ul lang="en">
-            <li>ANR CANELONI project (aligned carbon nanotube membranes): growth of VACNT carpets by aerosol-assisted catalytic CVD (process parameters, precursors, ferrocene catalyst).</li>
-            <li>Characterisation of the carpets (SEM, TEM, Raman, TGA) and interpretation (quality, nanotube diameter, density, alignment) to steer growth conditions.</li>
-            <li>Fabrication of nanoporous membranes, including RIE plasma etching; proposed new operating procedures and research directions (sulfur promoter, nanostructured zeolite substrates).</li>
-          </ul>
+          <p class="tl-org">CEA Paris-Saclay, <span lang="fr">laboratoire</span><span lang="en">laboratory</span> NIMBE / LEDNA</p>
+          <p class="tl-sum">
+            <span lang="fr">Projet ANR CANELONI&nbsp;: croissance de tapis de nanotubes de carbone alignés (VACNT) par CVD catalytique assistée par aérosol, caractérisation (MEB, MET, Raman, ATG) et fabrication de membranes nanoporeuses.</span>
+            <span lang="en">ANR CANELONI project: growth of aligned carbon nanotube (VACNT) carpets by aerosol-assisted catalytic CVD, characterisation (SEM, TEM, Raman, TGA) and fabrication of nanoporous membranes.</span>
+          </p>
         </div>
       </li>
 
@@ -264,22 +240,10 @@
         <div class="tl-what">
           <h3><span lang="fr">Doctorant en chimie des matériaux</span><span lang="en">PhD candidate in materials chemistry</span></h3>
           <p class="tl-org">IC2MP <span class="note">(CNRS / <span lang="fr">Université de Poitiers</span><span lang="en">University of Poitiers</span>)</span> &amp; LFCR <span class="note">(<span lang="fr">Université de Pau</span><span lang="en">University of Pau</span>)</span></p>
-          <ul lang="fr">
-            <li>Développement et optimisation de procédés CVD d'éthylène (jusqu'à 1&nbsp;000&nbsp;°C) et de voies hybrides (voie solide et co-alimentation CVD) pour contrôler la structure et la porosité de carbones microporeux (ZTC).</li>
-            <li>Modification, maintenance et réparation de bâtis CVD&nbsp;; conception (plans) d'un réacteur rotatif de montée en échelle, du mg au g&nbsp;: schéma de procédé, spécifications d'équipement, fenêtres opératoires.</li>
-            <li>Synthèse d'un nouveau carbone microporeux de type lamellaire, ayant abouti au dépôt d'une demande de brevet avec l'Université nationale de Yokohama (Japon, 2025).</li>
-            <li>Relations structure–propriétés (acidité de la zéolithe, cation compensateur, température de synthèse) établies en croisant DRX, Raman, XPS, physisorption, RMN du solide et RPE&nbsp;; 6&nbsp;articles, dont 3 en premier auteur.</li>
-            <li>Mise en forme de pastilles de ZTC robustes&nbsp;; mesures d'adsorption haute pression (CO<sub>2</sub>, CH<sub>4</sub>, H<sub>2</sub>) et de déformation induite par corrélation d'images numériques (mission de 3&nbsp;mois au LFCR).</li>
-            <li>Campagnes de caractérisation au CEMHTI (Orléans, RMN du solide) et au LASIRe (Lille, RPE)&nbsp;; formation et encadrement complet d'un stagiaire de M1 pendant 3&nbsp;mois.</li>
-          </ul>
-          <ul lang="en">
-            <li>Developed and optimised ethylene CVD processes (up to 1,000&nbsp;°C) and hybrid routes (solid-state and CVD co-feeding) to control the structure and porosity of microporous carbons (ZTC).</li>
-            <li>Modified, maintained and repaired CVD rigs; designed (drawings) a rotary reactor for scale-up from mg to g: process flow diagram, equipment specifications, operating windows.</li>
-            <li>Synthesised a new lamellar-type microporous carbon, leading to a patent application filed with Yokohama National University (Japan, 2025).</li>
-            <li>Established structure–property relationships (zeolite acidity, counter-cation, synthesis temperature) by combining XRD, Raman, XPS, physisorption, solid-state NMR and EPR; 6 articles, 3 as first author.</li>
-            <li>Shaped robust ZTC pellets; high-pressure adsorption (CO<sub>2</sub>, CH<sub>4</sub>, H<sub>2</sub>) and adsorption-induced deformation measurements by digital image correlation (3-month secondment at LFCR).</li>
-            <li>Characterisation campaigns at CEMHTI (Orléans, solid-state NMR) and LASIRe (Lille, EPR); trained and fully supervised a master's (M1) intern for 3 months.</li>
-          </ul>
+          <p class="tl-sum">
+            <span lang="fr">Thèse&nbsp;: «&nbsp;<i class="serif-i">Zeolite-Templated Carbons</i>&nbsp;: synthèse, fonctionnalisation, mise en forme et étude des déformations induites par l'adsorption de gaz à haute pression&nbsp;», soutenue en octobre 2025. Direction&nbsp;: A. Sachse, I. Batonneau-Gener (IC2MP), L. Perrier (LFCR).</span>
+            <span lang="en">Thesis: “<i class="serif-i">Zeolite-Templated Carbons</i>: synthesis, functionalisation, shaping and study of deformations induced by high-pressure gas adsorption”, defended in October 2025. Supervisors: A. Sachse, I. Batonneau-Gener (IC2MP), L. Perrier (LFCR).</span>
+          </p>
         </div>
       </li>
 
@@ -291,62 +255,23 @@
         <div class="tl-what">
           <h3><span lang="fr">Ingénieur R&amp;D en science des matériaux</span><span lang="en">R&amp;D engineer in materials science</span></h3>
           <p class="tl-org">UCB Pharma <span class="note">(<span lang="fr">consultant</span><span lang="en">consultant with</span> Jefferson Wells)</span></p>
-          <ul lang="fr">
-            <li>Gestion de projets de caractérisation physique en environnement GMP/GLP, du plan d'expériences et du développement/validation de méthodes analytiques jusqu'à l'analyse des données et au rapport.</li>
-            <li>Mise en œuvre d'un large parc de caractérisation des poudres&nbsp;: rhéomètre FT4, cellule de cisaillement Schulze, Granutools, granulométrie laser, morphogranulométrie, DVS, densité tapée, DRX, MEB, microscopie optique.</li>
-            <li>Formation et coordination de collègues sur les méthodes et instruments de caractérisation.</li>
-            <li>Collaboration avec les équipes Formulation, Procédés et Production pour résoudre des problèmes industriels et soutenir l'innovation, y compris en salles blanches GMP.</li>
-            <li>Mise en place du 5S dans l'échantillothèque (plus de 5&nbsp;000 échantillons)&nbsp;: traçabilité totale et intégrité des stocks.</li>
-          </ul>
-          <ul lang="en">
-            <li>Managed physical characterisation projects in a GMP/GLP environment, from design of experiments and analytical method development/validation to data analysis and reporting.</li>
-            <li>Operated a broad powder characterisation suite: FT4 rheometer, Schulze shear cell, Granutools, laser diffraction, morpho-granulometry, DVS, tapped density, XRD, SEM, optical microscopy.</li>
-            <li>Trained and coordinated colleagues on characterisation methods and instruments.</li>
-            <li>Worked with Formulation, Process and Production teams to solve industrial issues and support innovation, including in GMP cleanrooms.</li>
-            <li>Implemented 5S in the sample library (over 5,000 samples): full traceability and stock integrity.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="tl reveal">
-        <div class="tl-when">
-          <div class="tl-date">09.2019 — 12.2019</div>
-          <div class="tl-place"><span lang="fr">Braine-l'Alleud, Belgique</span><span lang="en">Braine-l'Alleud, Belgium</span></div>
-        </div>
-        <div class="tl-what">
-          <h3><span lang="fr">Stagiaire en science des matériaux</span><span lang="en">Materials science intern</span></h3>
-          <p class="tl-org">UCB Pharma <span class="note">· <span lang="fr">mémoire de master</span><span lang="en">master's thesis</span></span></p>
-          <ul lang="fr">
-            <li>Base de données de référence des excipients et analyse multivariée (ACP) pour identifier les tests redondants et rendre la stratégie analytique plus efficiente.</li>
-          </ul>
-          <ul lang="en">
-            <li>Reference database of excipients and multivariate analysis (PCA) to identify redundant tests and make the analytical strategy more efficient.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="tl reveal">
-        <div class="tl-when">
-          <div class="tl-date">01.2017 — 05.2017</div>
-          <div class="tl-place"><span lang="fr">Feluy, Belgique</span><span lang="en">Feluy, Belgium</span></div>
-        </div>
-        <div class="tl-what">
-          <h3><span lang="fr">Stagiaire en chimie analytique</span><span lang="en">Analytical chemistry intern</span></h3>
-          <p class="tl-org">TotalEnergies <span class="note">· <span lang="fr">mémoire de bachelier</span><span lang="en">bachelor's thesis</span></span></p>
-          <ul lang="fr">
-            <li>Développement d'un protocole d'analyse par spectroscopie UV-Vis en réflexion diffuse pour comparer les états d'activation de catalyseurs métallocènes supportés sur silice, préalablement synthétisés.</li>
-          </ul>
-          <ul lang="en">
-            <li>Developed a diffuse-reflectance UV-Vis protocol to compare the activation states of silica-supported metallocene catalysts, synthesised beforehand.</li>
-          </ul>
+          <p class="tl-sum">
+            <span lang="fr">Gestion de projets de caractérisation physique des poudres en environnement GMP/GLP, du développement et de la validation de méthodes jusqu'au rapport, avec les équipes Formulation, Procédés et Production.</span>
+            <span lang="en">Managed physical characterisation projects on powders in a GMP/GLP environment, from method development and validation to reporting, with the Formulation, Process and Production teams.</span>
+          </p>
         </div>
       </li>
     </ol>
+
+    <p class="tl-more reveal">
+      <span lang="fr">Auparavant&nbsp;: stages chez UCB Pharma (mémoire de master, 2019) et TotalEnergies (mémoire de bachelier, 2017). Le détail des missions figure dans le <a href="CV_Steven_Compere.pdf" target="_blank" rel="noopener">CV</a>.</span>
+      <span lang="en">Earlier: internships at UCB Pharma (master's thesis, 2019) and TotalEnergies (bachelor's thesis, 2017). Full details are in the <a href="CV_Steven_Compere_EN.pdf" target="_blank" rel="noopener">CV</a>.</span>
+    </p>
   </div>
 </section>
 
 <!-- ==================== 03 PUBLICATIONS ====================
-     Pour ajouter un article : copier un bloc <li class="pub">…</li>
+     Pour ajouter un article : copier un bloc <li class="pub reveal">…</li>
      et le placer en tête de liste (ordre chronologique inverse). -->
 <section class="section" id="publications">
   <div class="wrap">
@@ -354,131 +279,182 @@
       <p class="sec-num">03 · Publications</p>
       <h2><span lang="fr">Publications, brevet &amp; logiciel</span><span lang="en">Publications, patent &amp; software</span></h2>
       <p class="lead">
-        <span lang="fr">Articles dans des revues internationales à comité de lecture. D'autres manuscrits en premier auteur sont en préparation, dont une revue.</span>
-        <span lang="en">Articles in international peer-reviewed journals. Further first-author manuscripts are in preparation, including a review.</span>
+        <span lang="fr">Six articles dans des revues internationales à comité de lecture, dont trois en premier auteur. D'autres manuscrits en premier auteur sont en préparation, dont une revue.</span>
+        <span lang="en">Six articles in international peer-reviewed journals, three of them as first author. Further first-author manuscripts are in preparation, including a review.</span>
       </p>
-    </div>
-    <div class="pub-summary reveal">
-      <span class="tag">6 articles</span>
-      <span class="tag"><span lang="fr">3 en premier auteur</span><span lang="en">3 as first author</span></span>
-      <span class="tag"><span lang="fr">1 demande de brevet</span><span lang="en">1 patent application</span></span>
-      <span class="tag"><span lang="fr">1 logiciel libre</span><span lang="en">1 open-source tool</span></span>
     </div>
 
     <ol class="pubs">
       <li class="pub reveal">
         <div class="pub-year">2026</div>
-        <div>
+        <div class="pub-body">
           <p class="pub-title">Functionalized zeolite-templated carbons via solid-gas co-feeding synthesis</p>
-          <p class="pub-authors"><strong>S. Compère</strong>, I. Batonneau-Gener, A. Moissette, A. Le Person, A. Habrioux, A. Sachse</p>
-          <p class="pub-src"><i>Microporous and Mesoporous Materials</i> 417 (2027) 114414</p>
-          <div class="pub-tags">
-            <span class="tag tag-new"><span lang="fr">Nouveau · en ligne oct. 2026</span><span lang="en">New · online Oct. 2026</span></span>
-            <span class="tag tag-plain"><span lang="fr">Premier auteur</span><span lang="en">First author</span></span>
-          </div>
+          <p class="pub-cite"><strong>S. Compère</strong> et al. · <i>Microporous and Mesoporous Materials</i> 417 (2027) 114414</p>
         </div>
         <div class="pub-actions"><a class="pub-link" href="https://doi.org/10.1016/j.micromeso.2026.114414" target="_blank" rel="noopener">DOI<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </li>
 
       <li class="pub reveal">
         <div class="pub-year">2026</div>
-        <div>
+        <div class="pub-body">
           <p class="pub-title">Influence of the zeolite counter-ion on the properties of zeolite-templated carbons</p>
-          <p class="pub-authors"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, H. Vezin, V. Montouillout, A. Sachse</p>
-          <p class="pub-src"><i>Microporous and Mesoporous Materials</i> 407 (2026) 114107</p>
-          <div class="pub-tags"><span class="tag tag-plain"><span lang="fr">Premier auteur</span><span lang="en">First author</span></span></div>
+          <p class="pub-cite"><strong>S. Compère</strong> et al. · <i>Microporous and Mesoporous Materials</i> 407 (2026) 114107</p>
         </div>
         <div class="pub-actions"><a class="pub-link" href="https://doi.org/10.1016/j.micromeso.2026.114107" target="_blank" rel="noopener">DOI<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </li>
 
       <li class="pub reveal">
         <div class="pub-year">2025</div>
-        <div>
+        <div class="pub-body">
           <p class="pub-title">Zeolite-templated carbon pellets by in situ generated binder: deformation behavior under high-pressure CO<sub>2</sub> adsorption</p>
-          <p class="pub-authors"><strong>S. Compère</strong>, R. Minhas, I. Batonneau-Gener, C. Miqueu, L. Perrier, A. Sachse</p>
-          <p class="pub-src"><i>Microporous and Mesoporous Materials</i> 399 (2026) 113837</p>
-          <div class="pub-tags"><span class="tag tag-plain"><span lang="fr">Premier auteur</span><span lang="en">First author</span></span></div>
+          <p class="pub-cite"><strong>S. Compère</strong> et al. · <i>Microporous and Mesoporous Materials</i> 399 (2026) 113837</p>
         </div>
         <div class="pub-actions"><a class="pub-link" href="https://doi.org/10.1016/j.micromeso.2025.113837" target="_blank" rel="noopener">DOI<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </li>
 
       <li class="pub is-patent reveal">
         <div class="pub-year">2025</div>
-        <div>
+        <div class="pub-body">
           <p class="pub-title">Porous carbon-based material and method for producing porous carbon-based material</p>
-          <p class="pub-authors"><strong>S. Compère</strong>, I. Batonneau-Gener, A. Sachse, Y. Kubota, S. Inagaki</p>
-          <p class="pub-src">
-            <span lang="fr">Demande de brevet japonais n°&nbsp;25006, déposée le 17&nbsp;septembre&nbsp;2025 avec l'Université nationale de Yokohama</span>
+          <p class="pub-cite"><span class="tag"><span lang="fr">Brevet</span><span lang="en">Patent</span></span>
+            <strong>S. Compère</strong>, I. Batonneau-Gener, A. Sachse, Y. Kubota, S. Inagaki ·
+            <span lang="fr">demande de brevet japonais n°&nbsp;25006, déposée le 17&nbsp;septembre&nbsp;2025 avec l'Université nationale de Yokohama</span>
             <span lang="en">Japanese patent application no.&nbsp;25006, filed 17&nbsp;September&nbsp;2025 with Yokohama National University</span>
           </p>
-          <div class="pub-tags"><span class="tag"><span lang="fr">Brevet</span><span lang="en">Patent</span></span></div>
         </div>
         <div class="pub-actions"></div>
       </li>
 
       <li class="pub reveal">
         <div class="pub-year">2024</div>
-        <div>
+        <div class="pub-body">
           <p class="pub-title">N,S-doped zeolite-templated carbon like supported Ni<sub>x</sub>Fe<sub>y</sub>S<sub>z</sub> as an efficient bifunctional catalyst for rechargeable zinc–air batteries</p>
-          <p class="pub-authors">L. Loupias, R. Boulé, N. Benbakoura, <strong>S. Compère</strong>, J. Rousseau, L. Mazière, F. Pailloux, V. Mauchamp, J. Pacaud, S. Célérier, K. Servat, T. W. Napporn, C. Morais, A. Sachse, A. Habrioux</p>
-          <p class="pub-src"><i>ChemCatChem</i> 16 (2024) e202400555</p>
+          <p class="pub-cite">L. Loupias, …, <strong>S. Compère</strong>, …, A. Sachse, A. Habrioux · <i>ChemCatChem</i> 16 (2024) e202400555</p>
         </div>
         <div class="pub-actions"><a class="pub-link" href="https://doi.org/10.1002/cctc.202400555" target="_blank" rel="noopener">DOI<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </li>
 
       <li class="pub reveal">
         <div class="pub-year">2024</div>
-        <div>
+        <div class="pub-body">
           <p class="pub-title">Impact of thermal ethylene degradation in zeolite-templated carbon synthesis</p>
-          <p class="pub-authors">T. Aumond, <strong>S. Compère</strong>, A. Sachse</p>
-          <p class="pub-src"><i>Microporous and Mesoporous Materials</i> 367 (2024) 112967</p>
+          <p class="pub-cite">T. Aumond, <strong>S. Compère</strong>, A. Sachse · <i>Microporous and Mesoporous Materials</i> 367 (2024) 112967</p>
         </div>
         <div class="pub-actions"><a class="pub-link" href="https://doi.org/10.1016/j.micromeso.2023.112967" target="_blank" rel="noopener">DOI<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </li>
 
       <li class="pub reveal">
         <div class="pub-year">2023</div>
-        <div>
+        <div class="pub-body">
           <p class="pub-title">Acidity: a key parameter in zeolite-templated carbon formation</p>
-          <p class="pub-authors">T. Aumond, H. Vezin, I. Batonneau-Gener, <strong>S. Compère</strong>, Y. Pouilloux, A. Le Person, A. Moissette, A. Sachse</p>
-          <p class="pub-src"><i>Small</i> 19 (2023) 2300972</p>
+          <p class="pub-cite">T. Aumond, …, <strong>S. Compère</strong>, …, A. Sachse · <i>Small</i> 19 (2023) 2300972</p>
         </div>
         <div class="pub-actions"><a class="pub-link" href="https://doi.org/10.1002/smll.202300972" target="_blank" rel="noopener">DOI<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
       </li>
     </ol>
 
-    <!-- Logiciel -->
-    <div class="software reveal">
-      <div class="sw-main">
-        <span class="tag"><span lang="fr">Logiciel libre · licence MIT</span><span lang="en">Open source · MIT licence</span></span>
-        <h3>AdsorpSuite</h3>
-        <p class="sw-sub">v3.0 · Python · 2026</p>
-        <p>
-          <span lang="fr">Application Python à interface graphique, dédiée à l'analyse thermodynamique des isothermes d'adsorption de matériaux poreux (carbones, zéolithes, MOF). Code ouvert et citable grâce à son DOI Zenodo.</span>
-          <span lang="en">Python desktop application for the thermodynamic analysis of adsorption isotherms on porous materials (carbons, zeolites, MOFs). Open code, citable through its Zenodo DOI.</span>
-        </p>
+    <div class="cards">
+      <!-- Logiciel -->
+      <div class="software reveal">
+        <div class="sw-main">
+          <h3>AdsorpSuite <span class="tag"><span lang="fr">Logiciel libre · licence MIT</span><span lang="en">Open source · MIT licence</span></span></h3>
+          <p>
+            <span lang="fr">Application Python à interface graphique pour l'analyse des isothermes d'adsorption de matériaux poreux&nbsp;: ajustement de 7 modèles, conversion excès → absolu, mélanges par IAST.</span>
+            <span lang="en">Python desktop application for analysing adsorption isotherms on porous materials: fitting of 7 models, excess-to-absolute conversion, IAST mixture predictions.</span>
+          </p>
+        </div>
         <div class="sw-links">
           <a class="btn" href="https://github.com/stevencompere/AdsorpSuite" target="_blank" rel="noopener">
             <svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>
             <span lang="fr">Code source</span><span lang="en">Source code</span>
           </a>
-          <a class="btn btn-ghost" href="https://doi.org/10.5281/zenodo.22011513" target="_blank" rel="noopener">DOI 10.5281/zenodo.22011513</a>
+          <a class="btn btn-ghost" href="https://doi.org/10.5281/zenodo.22011513" target="_blank" rel="noopener">DOI<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
-      <ul class="sw-specs">
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>
-          <span lang="fr"><b>7 modèles d'isothermes</b> (Langmuir, double Langmuir, Freundlich, Sips, Toth, Dubinin-Radushkevich, Dubinin-Astakhov) et ajustement non linéaire multi-départ.</span>
-          <span lang="en"><b>7 isotherm models</b> (Langmuir, dual-site Langmuir, Freundlich, Sips, Toth, Dubinin-Radushkevich, Dubinin-Astakhov) with multi-start non-linear fitting.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>
-          <span lang="fr"><b>Statistiques robustes</b>&nbsp;: intervalles de confiance à 95&nbsp;% par bootstrap, classement AIC/BIC, analyse de colinéarité.</span>
-          <span lang="en"><b>Robust statistics</b>: 95% bootstrap confidence intervals, AIC/BIC ranking, collinearity analysis.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>
-          <span lang="fr"><b>Conversion excès → absolu</b>&nbsp;: densité du gaz par l'équation d'état de Peng-Robinson (translation de Péneloux) ou CoolProp.</span>
-          <span lang="en"><b>Excess-to-absolute conversion</b>: gas density from the Peng-Robinson equation of state (Péneloux translation) or CoolProp.</span></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>
-          <span lang="fr"><b>IAST</b>&nbsp;: prédiction de l'adsorption de mélanges binaires et ternaires.</span>
-          <span lang="en"><b>IAST</b>: adsorption predictions for binary and ternary mixtures.</span></li>
-      </ul>
+
+      <!-- Communications : la liste complète reste disponible, repliée par défaut -->
+      <details class="more reveal" id="communications">
+        <summary>
+          <span class="more-inner">
+            <span class="more-title"><span lang="fr">Communications en congrès</span><span lang="en">Conference contributions</span></span>
+            <span class="more-desc">
+              <span lang="fr">8 communications dans des congrès nationaux et internationaux entre 2023 et 2025, dont 5 présentations orales.</span>
+              <span lang="en">8 contributions to national and international conferences between 2023 and 2025, including 5 oral presentations.</span>
+            </span>
+            <span class="more-toggle">
+              <span class="when-closed"><span lang="fr">Voir la liste</span><span lang="en">Show the list</span></span>
+              <span class="when-open"><span lang="fr">Masquer la liste</span><span lang="en">Hide the list</span></span>
+              <svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </span>
+          </span>
+        </summary>
+        <ol class="confs">
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Mai</span><span lang="en">May</span> 2025<span class="place">Porto</span></div>
+            <div>
+              <p class="conf-title">Self-supported zeolite-templated carbon wafers for gas adsorption and induced deformation studies</p>
+              <p class="conf-meta"><span class="conf-type oral">Oral</span>Fundamentals of Adsorption (FOA), Portugal</p>
+              <p class="conf-authors"><strong>S. Compère</strong>, L. Perrier, C. Miqueu, I. Batonneau-Gener, A. Sachse</p>
+            </div>
+          </li>
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Avril</span><span lang="en">April</span> 2025<span class="place">Blériot-Plage</span></div>
+            <div>
+              <p class="conf-title">From solid precursors to zeolite-templated carbons: a molecular odyssey toward porous carbon materials</p>
+              <p class="conf-meta"><span class="conf-type oral">Oral</span>Groupe Français des Zéolithes (GFZ)</p>
+              <p class="conf-authors"><strong>S. Compère</strong>, A. Le Person, A. Moissette, H. Vezin, I. Batonneau-Gener, A. Sachse</p>
+            </div>
+          </li>
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Avril</span><span lang="en">April</span> 2025<span class="place">Blériot-Plage</span></div>
+            <div>
+              <p class="conf-title">Role of the zeolite counter-ion in controlling the synthesis of zeolite-templated carbons</p>
+              <p class="conf-meta"><span class="conf-type">Poster</span>Groupe Français des Zéolithes (GFZ)</p>
+              <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, A. Sachse</p>
+            </div>
+          </li>
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Juil.</span><span lang="en">July</span> 2024<span class="place">Osaka</span></div>
+            <div>
+              <p class="conf-title">Zeolite-templated carbons: a new solid-state synthesis route</p>
+              <p class="conf-meta"><span class="conf-type oral">Oral</span><span>ZMPC 2024, <span lang="fr">Japon</span><span lang="en">Japan</span></span><span class="conf-note"><span lang="fr">présenté par un co-auteur</span><span lang="en">presented by a co-author</span></span></p>
+              <p class="conf-authors">A. Moissette, <strong>S. Compère</strong>, A. Le Person, T. Aumond, I. Batonneau-Gener, H. Vezin, A. Sachse</p>
+            </div>
+          </li>
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Mars</span><span lang="en">March</span> 2024<span class="place">La Rochelle</span></div>
+            <div>
+              <p class="conf-title">Explore solid-state synthesis in the quest of achieving zeolite-templated carbons</p>
+              <p class="conf-meta"><span class="conf-type">Poster</span>Groupe Français des Zéolithes (GFZ)</p>
+              <p class="conf-authors"><strong>S. Compère</strong>, A. Le Person, A. Moissette, H. Vezin, I. Batonneau-Gener, A. Sachse</p>
+            </div>
+          </li>
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Juil.</span><span lang="en">July</span> 2023<span class="place">Portorož</span></div>
+            <div>
+              <p class="conf-title">Advances in zeolite-templated carbon synthesis: investigating the effect of temperature and zeolite acidity</p>
+              <p class="conf-meta"><span class="conf-type oral">Oral</span><span>FEZA 2023, <span lang="fr">Slovénie</span><span lang="en">Slovenia</span></span><span class="conf-note"><span lang="fr">présenté par un co-auteur</span><span lang="en">presented by a co-author</span></span></p>
+              <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, A. Sachse</p>
+            </div>
+          </li>
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Mars</span><span lang="en">March</span> 2023<span class="place">Obernai</span></div>
+            <div>
+              <p class="conf-title">Impact of the ethylene transformation mechanism in the synthesis of zeolite-templated carbons</p>
+              <p class="conf-meta"><span class="conf-type oral">Oral</span>Groupe Français des Zéolithes (GFZ)</p>
+              <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, A. Sachse</p>
+            </div>
+          </li>
+          <li class="conf">
+            <div class="conf-when"><span lang="fr">Mars</span><span lang="en">March</span> 2023<span class="place">Poitiers</span></div>
+            <div>
+              <p class="conf-title">Micropore 3D graphenes: circumventing essential issues in large scale synthesis</p>
+              <p class="conf-meta"><span class="conf-type">Poster</span>C'Nano</p>
+              <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, L. Perrier, I. Batonneau-Gener, A. Sachse</p>
+            </div>
+          </li>
+        </ol>
+      </details>
     </div>
 
     <p class="more-links reveal">
@@ -490,212 +466,36 @@
   </div>
 </section>
 
-<!-- ==================== 04 COMMUNICATIONS ==================== -->
-<section class="section" id="communications">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="sec-num">04 · Communications</p>
-      <h2><span lang="fr">Communications en congrès</span><span lang="en">Conference contributions</span></h2>
-      <p class="lead">
-        <span lang="fr">8 communications dans des congrès nationaux et internationaux entre 2023 et 2025, dont 5 présentations orales.</span>
-        <span lang="en">8 contributions to national and international conferences between 2023 and 2025, including 5 oral presentations.</span>
-      </p>
-    </div>
-
-    <ol class="confs">
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Mai</span><span lang="en">May</span> 2025<span class="place">Porto</span></div>
-        <div>
-          <p class="conf-title">Self-supported zeolite-templated carbon wafers for gas adsorption and induced deformation studies</p>
-          <p class="conf-meta"><span class="conf-type oral">Oral</span>Fundamentals of Adsorption (FOA), Portugal</p>
-          <p class="conf-authors"><strong>S. Compère</strong>, L. Perrier, C. Miqueu, I. Batonneau-Gener, A. Sachse</p>
-        </div>
-      </li>
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Avril</span><span lang="en">April</span> 2025<span class="place">Blériot-Plage</span></div>
-        <div>
-          <p class="conf-title">From solid precursors to zeolite-templated carbons: a molecular odyssey toward porous carbon materials</p>
-          <p class="conf-meta"><span class="conf-type oral">Oral</span>Groupe Français des Zéolithes (GFZ)</p>
-          <p class="conf-authors"><strong>S. Compère</strong>, A. Le Person, A. Moissette, H. Vezin, I. Batonneau-Gener, A. Sachse</p>
-        </div>
-      </li>
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Avril</span><span lang="en">April</span> 2025<span class="place">Blériot-Plage</span></div>
-        <div>
-          <p class="conf-title">Role of the zeolite counter-ion in controlling the synthesis of zeolite-templated carbons</p>
-          <p class="conf-meta"><span class="conf-type">Poster</span>Groupe Français des Zéolithes (GFZ)</p>
-          <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, A. Sachse</p>
-        </div>
-      </li>
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Juil.</span><span lang="en">July</span> 2024<span class="place">Osaka</span></div>
-        <div>
-          <p class="conf-title">Zeolite-templated carbons: a new solid-state synthesis route</p>
-          <p class="conf-meta"><span class="conf-type oral">Oral</span><span>ZMPC 2024, <span lang="fr">Japon</span><span lang="en">Japan</span></span><span class="conf-note"><span lang="fr">présenté par un co-auteur</span><span lang="en">presented by a co-author</span></span></p>
-          <p class="conf-authors">A. Moissette, <strong>S. Compère</strong>, A. Le Person, T. Aumond, I. Batonneau-Gener, H. Vezin, A. Sachse</p>
-        </div>
-      </li>
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Mars</span><span lang="en">March</span> 2024<span class="place">La Rochelle</span></div>
-        <div>
-          <p class="conf-title">Explore solid-state synthesis in the quest of achieving zeolite-templated carbons</p>
-          <p class="conf-meta"><span class="conf-type">Poster</span>Groupe Français des Zéolithes (GFZ)</p>
-          <p class="conf-authors"><strong>S. Compère</strong>, A. Le Person, A. Moissette, H. Vezin, I. Batonneau-Gener, A. Sachse</p>
-        </div>
-      </li>
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Juil.</span><span lang="en">July</span> 2023<span class="place">Portorož</span></div>
-        <div>
-          <p class="conf-title">Advances in zeolite-templated carbon synthesis: investigating the effect of temperature and zeolite acidity</p>
-          <p class="conf-meta"><span class="conf-type oral">Oral</span><span>FEZA 2023, <span lang="fr">Slovénie</span><span lang="en">Slovenia</span></span><span class="conf-note"><span lang="fr">présenté par un co-auteur</span><span lang="en">presented by a co-author</span></span></p>
-          <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, A. Sachse</p>
-        </div>
-      </li>
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Mars</span><span lang="en">March</span> 2023<span class="place">Obernai</span></div>
-        <div>
-          <p class="conf-title">Impact of the ethylene transformation mechanism in the synthesis of zeolite-templated carbons</p>
-          <p class="conf-meta"><span class="conf-type oral">Oral</span>Groupe Français des Zéolithes (GFZ)</p>
-          <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, I. Batonneau-Gener, A. Sachse</p>
-        </div>
-      </li>
-      <li class="conf reveal">
-        <div class="conf-when"><span lang="fr">Mars</span><span lang="en">March</span> 2023<span class="place">Poitiers</span></div>
-        <div>
-          <p class="conf-title">Micropore 3D graphenes: circumventing essential issues in large scale synthesis</p>
-          <p class="conf-meta"><span class="conf-type">Poster</span>C'Nano</p>
-          <p class="conf-authors"><strong>S. Compère</strong>, T. Aumond, L. Perrier, I. Batonneau-Gener, A. Sachse</p>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ==================== 05 COMPÉTENCES ==================== -->
+<!-- ==================== 04 COMPÉTENCES ====================
+     Quatre familles seulement : la liste complète est dans le CV (PDF). -->
 <section class="section" id="competences">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="sec-num">05 · <span lang="fr">Compétences</span><span lang="en">Skills</span></p>
+      <p class="sec-num">04 · <span lang="fr">Compétences</span><span lang="en">Skills</span></p>
       <h2><span lang="fr">Compétences clés</span><span lang="en">Key skills</span></h2>
     </div>
     <dl class="specs reveal">
       <div>
         <dt><span lang="fr">Procédés CVD</span><span lang="en">CVD processes</span></dt>
-        <dd><span lang="fr">CVD catalytique assistée par aérosol (VACNT)&nbsp;; CVD d'éthylène jusqu'à 1&nbsp;000&nbsp;°C&nbsp;; voies hybrides solide/CVD&nbsp;; gestion des flux gazeux&nbsp;; optimisation de procédés&nbsp;; gravure RIE.</span>
-            <span lang="en">Aerosol-assisted catalytic CVD (VACNT); ethylene CVD up to 1,000&nbsp;°C; hybrid solid/CVD routes; gas-flow management; process optimisation; RIE etching.</span></dd>
+        <dd><span lang="fr">CVD catalytique assistée par aérosol (VACNT)&nbsp;; CVD d'éthylène jusqu'à 1&nbsp;000&nbsp;°C&nbsp;; voies hybrides solide/CVD&nbsp;; gravure RIE&nbsp;; modification et maintenance de bâtis, conception d'un réacteur rotatif de montée en échelle.</span>
+            <span lang="en">Aerosol-assisted catalytic CVD (VACNT); ethylene CVD up to 1,000&nbsp;°C; hybrid solid/CVD routes; RIE etching; modification and maintenance of rigs, design of a rotary scale-up reactor.</span></dd>
       </div>
       <div>
         <dt><span lang="fr">Caractérisation</span><span lang="en">Characterisation</span></dt>
-        <dd><span lang="fr">MEB/EDS, MET, Raman, XPS, DRX, FT-IR, UV-Vis, RPE, RMN du solide, ATG/DSC, physisorption (N<sub>2</sub>, Ar, CO<sub>2</sub>), porosimétrie Hg, pycnométrie He, CHNS, ICP-OES.</span>
-            <span lang="en">SEM/EDS, TEM, Raman, XPS, XRD, FT-IR, UV-Vis, EPR, solid-state NMR, TGA/DSC, physisorption (N<sub>2</sub>, Ar, CO<sub>2</sub>), Hg porosimetry, He pycnometry, CHNS, ICP-OES.</span></dd>
+        <dd><span lang="fr">MEB/EDS, MET, Raman, XPS, DRX, FT-IR, UV-Vis, RPE, RMN du solide, ATG/DSC, physisorption (N<sub>2</sub>, Ar, CO<sub>2</sub>), porosimétrie Hg, pycnométrie He, CHNS, ICP-OES&nbsp;; adsorption de gaz haute pression et mesures de déformation&nbsp;; conductivité par spectroscopie d'impédance.</span>
+            <span lang="en">SEM/EDS, TEM, Raman, XPS, XRD, FT-IR, UV-Vis, EPR, solid-state NMR, TGA/DSC, physisorption (N<sub>2</sub>, Ar, CO<sub>2</sub>), Hg porosimetry, He pycnometry, CHNS, ICP-OES; high-pressure gas adsorption and deformation measurements; conductivity by impedance spectroscopy.</span></dd>
       </div>
       <div>
-        <dt><span lang="fr">Mesures électriques</span><span lang="en">Electrical measurements</span></dt>
-        <dd><span lang="fr">Conductivité par spectroscopie d'impédance&nbsp;; charge électrostatique sur banc maison.</span>
-            <span lang="en">Conductivity by impedance spectroscopy; electrostatic charge on an in-house bench.</span></dd>
-      </div>
-      <div>
-        <dt><span lang="fr">Bâtis expérimentaux</span><span lang="en">Experimental rigs</span></dt>
-        <dd><span lang="fr">Modification, maintenance et réparation de bâtis&nbsp;; conception d'un réacteur rotatif de montée en échelle&nbsp;; adsorption de gaz haute pression et mesures de déformation.</span>
-            <span lang="en">Modification, maintenance and repair of rigs; design of a rotary scale-up reactor; high-pressure gas adsorption and deformation measurements.</span></dd>
-      </div>
-      <div>
-        <dt><span lang="fr">Gestion de projet</span><span lang="en">Project management</span></dt>
-        <dd><span lang="fr">Gestion de projets R&amp;D, collaborations (CEMHTI, LASIRe, LFCR, Université nationale de Yokohama), brevet, 8&nbsp;communications, veille technologique.</span>
-            <span lang="en">R&amp;D project management, collaborations (CEMHTI, LASIRe, LFCR, Yokohama National University), patent, 8 conference contributions, technology watch.</span></dd>
-      </div>
-      <div>
-        <dt><span lang="fr">Qualité &amp; sécurité</span><span lang="en">Quality &amp; safety</span></dt>
-        <dd><span lang="fr">BPF/BPL (GMP/GLP), développement et validation de méthodes, traçabilité, 5S, Lean, culture HSE, manipulation d'acide fluorhydrique (HF), pratiques de salle blanche (GMP).</span>
-            <span lang="en">GMP/GLP, method development and validation, traceability, 5S, Lean, HSE culture, hydrofluoric acid (HF) handling, cleanroom practice (GMP).</span></dd>
-      </div>
-      <div>
-        <dt><span lang="fr">Encadrement</span><span lang="en">Supervision</span></dt>
-        <dd><span lang="fr">Encadrement complet d'un stagiaire de M1&nbsp;; formation et coordination de collègues.</span>
-            <span lang="en">Full supervision of a master's (M1) intern; training and coordination of colleagues.</span></dd>
+        <dt><span lang="fr">Qualité &amp; projets</span><span lang="en">Quality &amp; projects</span></dt>
+        <dd><span lang="fr">BPF/BPL (GMP/GLP), développement et validation de méthodes, traçabilité, 5S, Lean, culture HSE&nbsp;; gestion de projets R&amp;D, encadrement et formation.</span>
+            <span lang="en">GMP/GLP, method development and validation, traceability, 5S, Lean, HSE culture; R&amp;D project management, supervision and training.</span></dd>
       </div>
       <div>
         <dt><span lang="fr">Données &amp; outils</span><span lang="en">Data &amp; tools</span></dt>
-        <dd><span lang="fr">Python (traitement de données, modélisation IAST&nbsp;; auteur du logiciel libre AdsorpSuite), OriginLab, ImageJ, SIMCA (ACP).</span>
-            <span lang="en">Python (data processing, IAST modelling; author of the open-source AdsorpSuite software), OriginLab, ImageJ, SIMCA (PCA).</span></dd>
-      </div>
-      <div>
-        <dt><span lang="fr">IA &amp; informatique</span><span lang="en">AI &amp; computing</span></dt>
-        <dd><span lang="fr">Utilisation avancée d'outils d'IA (Claude Code) pour le développement de code et le traitement de données&nbsp;; grande aisance informatique et prise en main très rapide de nouveaux logiciels.</span>
-            <span lang="en">Advanced use of AI tools (Claude Code) for code development and data processing; highly comfortable with computing and very quick to master new software.</span></dd>
-      </div>
-      <div>
-        <dt><span lang="fr">Langues</span><span lang="en">Languages</span></dt>
-        <dd><span lang="fr">Français (langue maternelle), anglais (C1).</span>
-            <span lang="en">French (native), English (C1).</span></dd>
+        <dd><span lang="fr">Python (traitement de données, modélisation IAST&nbsp;; auteur du logiciel libre AdsorpSuite), OriginLab, ImageJ, SIMCA (ACP)&nbsp;; utilisation avancée d'outils d'IA (Claude Code) pour le développement de code et le traitement de données.</span>
+            <span lang="en">Python (data processing, IAST modelling; author of the open-source AdsorpSuite software), OriginLab, ImageJ, SIMCA (PCA); advanced use of AI tools (Claude Code) for code development and data processing.</span></dd>
       </div>
     </dl>
-  </div>
-</section>
-
-<!-- ==================== 06 FORMATION & ENGAGEMENTS ==================== -->
-<section class="section" id="formation">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="sec-num">06 · <span lang="fr">Formation</span><span lang="en">Education</span></p>
-      <h2><span lang="fr">Formation &amp; engagements</span><span lang="en">Education &amp; involvement</span></h2>
-    </div>
-    <div class="two-col">
-      <div class="reveal">
-        <p class="col-title"><span lang="fr">Diplômes</span><span lang="en">Degrees</span></p>
-        <ul class="edu">
-          <li>
-            <div class="edu-top"><h3><span lang="fr">Doctorat en chimie des matériaux</span><span lang="en">PhD in materials chemistry</span></h3><span class="yr">2022–2025</span></div>
-            <p class="org"><span lang="fr">Université de Poitiers</span><span lang="en">University of Poitiers</span> (IC2MP)</p>
-            <p class="detail">
-              <span lang="fr">Thèse&nbsp;: «&nbsp;<i class="serif-i">Zeolite-Templated Carbons</i>&nbsp;: synthèse, fonctionnalisation, mise en forme et étude des déformations induites par l'adsorption de gaz à haute pression&nbsp;», soutenue en octobre 2025. Direction&nbsp;: A. Sachse, I. Batonneau-Gener (IC2MP), L. Perrier (LFCR).</span>
-              <span lang="en">Thesis: “<i class="serif-i">Zeolite-Templated Carbons</i>: synthesis, functionalisation, shaping and study of deformations induced by high-pressure gas adsorption”, defended in October 2025. Supervisors: A. Sachse, I. Batonneau-Gener (IC2MP), L. Perrier (LFCR).</span>
-            </p>
-          </li>
-          <li>
-            <div class="edu-top"><h3><span lang="fr">Diplôme d'ingénieur industriel en chimie</span><span lang="en">Industrial engineering degree in chemistry</span></h3><span class="yr">2017–2020</span></div>
-            <p class="org">Haute École Louvain en Hainaut (HELHa), <span lang="fr">Belgique</span><span lang="en">Belgium</span></p>
-            <p class="detail"><span lang="fr">Mémoire&nbsp;: «&nbsp;Caractérisation physique d'excipients pharmaceutiques&nbsp;».</span><span lang="en">Thesis: “Physical characterisation of pharmaceutical excipients”.</span></p>
-          </li>
-          <li>
-            <div class="edu-top"><h3><span lang="fr">Bachelier en chimie appliquée</span><span lang="en">Bachelor's degree in applied chemistry</span></h3><span class="yr">2014–2017</span></div>
-            <p class="org">Haute École Louvain en Hainaut (HELHa), <span lang="fr">Belgique</span><span lang="en">Belgium</span></p>
-          </li>
-        </ul>
-        <p class="col-title" style="margin-top:36px"><span lang="fr">Formations complémentaires</span><span lang="en">Further training</span></p>
-        <ul class="edu small">
-          <li>
-            <div class="edu-top"><h3><span lang="fr">Microscopie électronique en transmission (MET)</span><span lang="en">Transmission electron microscopy (TEM)</span></h3><span class="yr">2026</span></div>
-            <p class="org">LPICM, École polytechnique</p>
-          </li>
-          <li>
-            <div class="edu-top"><h3><span lang="fr">Une année de cours du soir en sciences de gestion (programme de master)</span><span lang="en">One year of evening courses in management (master's programme)</span></h3><span class="yr">2021–2022</span></div>
-            <p class="org">UCLouvain, <span lang="fr">Belgique</span><span lang="en">Belgium</span></p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="reveal">
-        <p class="col-title"><span lang="fr">Engagements</span><span lang="en">Involvement</span></p>
-        <ul class="engage">
-          <li>
-            <b><span lang="fr">Conseil de laboratoire de l'IC2MP</span><span lang="en">IC2MP laboratory council</span></b>
-            <span lang="fr">Représentant élu des non-permanents (2022–2023)&nbsp;: participation aux décisions stratégiques et budgétaires.</span>
-            <span lang="en">Elected representative of non-permanent staff (2022–2023): involved in strategic and budget decisions.</span>
-          </li>
-          <li>
-            <b>Picta'Sciences</b>
-            <span lang="fr">Organisation d'événements scientifiques pour les doctorants de l'Université de Poitiers.</span>
-            <span lang="en">Organisation of scientific events for PhD students at the University of Poitiers.</span>
-          </li>
-          <li>
-            <b><span lang="fr">Encadrement</span><span lang="en">Supervision</span></b>
-            <span lang="fr">Formation et encadrement complet d'un stagiaire de Master&nbsp;1 pendant 3&nbsp;mois.</span>
-            <span lang="en">Trained and fully supervised a first-year master's intern for 3 months.</span>
-          </li>
-        </ul>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -705,15 +505,16 @@
   <div class="wrap contact-inner">
     <div class="reveal">
       <p class="sec-num">Contact</p>
-      <h2><span lang="fr">Discutons de vos projets.</span><span lang="en">Let's talk about your projects.</span></h2>
+      <h2><span lang="fr">Prenons contact.</span><span lang="en">Get in touch.</span></h2>
       <p>
         <span lang="fr">Ouvert aux collaborations de recherche, aux projets de R&amp;D industrielle et aux échanges autour des matériaux carbonés, des procédés CVD et de l'adsorption.</span>
         <span lang="en">Open to research collaborations, industrial R&amp;D projects and discussions on carbon materials, CVD processes and adsorption.</span>
       </p>
+    </div>
+    <div class="contact-side reveal">
       <div class="actions">
         <a class="btn" href="mailto:compere.steven@gmail.com">
-          <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
-          <span lang="fr">Écrire un e-mail</span><span lang="en">Send an email</span>
+          <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>compere.steven@gmail.com
         </a>
         <a class="btn btn-ghost" lang="fr" href="CV_Steven_Compere.pdf" target="_blank" rel="noopener">
           <svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>CV (PDF)
@@ -722,14 +523,13 @@
           <svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>CV (PDF)
         </a>
       </div>
+      <ul class="profiles">
+        <li><a href="https://www.linkedin.com/in/steven-compere/" target="_blank" rel="noopener">LinkedIn<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://orcid.org/0009-0006-3474-8748" target="_blank" rel="noopener">ORCID<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://scholar.google.com/citations?hl=fr&amp;user=AmX65-sAAAAJ" target="_blank" rel="noopener">Google Scholar<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        <li><a href="https://github.com/stevencompere" target="_blank" rel="noopener">GitHub<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+      </ul>
     </div>
-    <ul class="contact-list reveal">
-      <li><span class="k">E-mail</span><a href="mailto:compere.steven@gmail.com">compere.steven@gmail.com</a></li>
-      <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/steven-compere/" target="_blank" rel="noopener">in/steven-compere</a></li>
-      <li><span class="k">ORCID</span><a href="https://orcid.org/0009-0006-3474-8748" target="_blank" rel="noopener">0009-0006-3474-8748</a></li>
-      <li><span class="k">GitHub</span><a href="https://github.com/stevencompere" target="_blank" rel="noopener">stevencompere</a></li>
-      <li><span class="k"><span lang="fr">Localisation</span><span lang="en">Location</span></span><span class="v">Paris-Saclay, France</span></li>
-    </ul>
   </div>
 </section>
 </main>
